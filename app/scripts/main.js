@@ -56,7 +56,7 @@
   }
 
   function func() {
-    // $('body').addClass('ready')
+    $('body').addClass('ready')
 
     $('.back-to-top').on('click',function(){
       $("html, body").animate({ scrollTop: 0 },'slow');

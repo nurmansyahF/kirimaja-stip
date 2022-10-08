@@ -105,6 +105,12 @@ html, body { font-size: 14px; line-height: 22px; font-family: "Nunito Regular", 
 /* Component style */
 /* ------------------------------------------------------------------------------------------------ */
 /* Animations */
+body { position: relative; top: 50px; opacity: 0; transition: all .5s linear; }
+
+body.ready { -webkit-transform: none; transform: none; top: 0; opacity: 1; transition: all .5s linear; }
+
+body.transition { top: -50px; opacity: 0; transition: all .5s linear; }
+
 @-webkit-keyframes hvr-push { 50% { -webkit-transform: scale(0.95);
     transform: scale(0.95); }
   100% { -webkit-transform: scale(1);
