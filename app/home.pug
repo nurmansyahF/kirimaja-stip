@@ -1,0 +1,99 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "home";
+
+
+block content
+  .home
+    section.home_masthead
+      .home_masthead-bg
+        img(src="images/img-masthead.png", alt="img-masthead")
+      .container
+        .home_masthead-text
+          h1  KirimAja-stip
+          .subtitle
+            p Jastip makanan khas daerah sehari <br>pasti sampai!
+        .button_cart
+          .button_cart-qty
+            span 0
+          a(href="#")
+            img(src="images/ic-cart.svg", alt="ic")
+    section.home_banner
+      .container
+        .slider-banner
+          .owl-item
+            img(src="images/img-banner-slider.png", alt="")
+        //-   .owl-item
+        //-     img(src="images/img-banner-slider.png", alt="")
+    section.home_product
+      .container
+        h3 Pilih makanan favoritmu
+      .product_category
+        a.pill.selected(href="#")
+          span Semua
+        a.pill(href="#")
+          span Jambi
+        a.pill(href="#")
+          span Medan
+        a.pill(href="#")
+          span Padang
+        a.pill(href="#")
+          span Palembang
+      .container
+        .product_wrap.row
+          .col-6
+            .product_card
+              .box-img
+                a(href="product-detail.html")
+                  img(src="images/img-product-1.png", alt="img")
+              .box-text
+                h4
+                  a(href="product-detail.html") Bolu Meranti
+                .price
+                  span.discount Rp 92.000
+                  span Rp 90.000
+          .col-6
+            .product_card
+              .box-img
+                a(href="product-detail.html")
+                  img(src="images/img-prouct-2.png", alt="img")
+              .box-text
+                h4
+                  a(href="product-detail.html") Pempek Palembang Cak Molek
+                .price
+                  span.discount Rp 157.000
+                  span Rp 153.000
+          .col-6
+            .product_card
+              .box-img
+                a(href="product-detail.html")
+                  img(src="images/img-product-3.png", alt="img")
+              .box-text
+                h4
+                  a(href="product-detail.html") Semur Sapi Khas Palembang Aline Box
+                .price
+                  span Rp 92.000
+          .col-6
+            .product_card
+              .box-img
+                a(href="product-detail.html")
+                  img(src="images/img-product-4.png", alt="img")
+              .box-text
+                h4
+                  a(href="product-detail.html") Pempek Palembang Cak Molek
+                .price
+                  span Rp 157.000
+          .col-6
+            .product_card
+              .box-img
+                a(href="product-detail.html")
+                  img(src="images/img-product-4.png", alt="img")
+              .box-text
+                h4
+                  a(href="product-detail.html") Pempek Palembang Cak Molek
+                .price
+                  span Rp 157.000
+
+
+

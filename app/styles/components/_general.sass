@@ -1,0 +1,230 @@
+/* General */
+
+.container
+  padding-right: 16px
+  padding-left: 16px
+
+// [class^="col-"],
+// [class*=" col-"]
+//   padding-left: 16px
+//   padding-right: 16px
+
+// .row
+//   margin-left: -16px
+//   margin-right: -16px
+
+body
+
+main
+
+section
+  padding: 1.714rem 0
+
+button,
+a
+  &:focus
+    outline: none !important
+
+.btn
+  &_primary
+    padding: 0.857rem 1.714rem
+    border: 1px solid $primary
+    border-radius: 6px
+    color: #FFF
+    font-weight: 600
+    transition: all .3s
+    display: inline-block
+    background: $primary
+    &:hover
+      background: $primary
+      color: #ffffff
+      text-decoration: none
+  &_block
+    display: block
+    width: 100%
+    & + .btn_block
+      margin-top: 0.857rem
+  &_border
+    padding: 0.857rem 1.714rem
+    border: 1px solid $primary
+    border-radius: 6px
+    color: $primary
+    font-weight: 600
+    transition: all .3s
+    display: inline-block
+    background: transparent
+    &:hover
+      background: $primary
+      color: #ffffff
+      text-decoration: none
+
+.button_cart
+  width: 2.857rem
+  height: 2.857rem
+  border-radius: 50%
+  border: 1px solid #E6E7E8
+  background: rgba(230, 231, 232, 0.1)
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 3
+  &-qty
+    position: absolute
+    top: -0.714rem
+    right: -0.357rem
+    background: #E27979
+    font-size: 0.857rem
+    line-height: 0.6666666666666666em
+    color: #fff
+    padding: 0.429rem
+    border-radius: 10px
+  a
+    display: flex
+    width: 2.857rem
+    height: 2.857rem
+    justify-content: center
+    align-items: center
+  img
+    width: 1.714rem
+    height: 1.714rem
+    object-fit: contain
+    display: block
+
+.button_back
+  width: 2.857rem
+  height: 2.857rem
+  display: block
+  font-size: 0
+  line-height: 0
+  background-color: gba(230, 231, 232, 0.1)
+  background-image: url(../images/ic-carret-left.svg)
+  background-size: 24px
+  background-repeat: no-repeat
+  background-position: center
+  border: 1px solid #E6E7E8
+  border-radius: 50%
+
+.icon
+  width: 1.143rem
+  height: 1.143rem
+  background-position: center
+  background-size: contain
+  background-repeat: no-repeat
+  display: inline-block
+  vertical-align: middle
+  margin-top: -4px
+  margin-right: 0.571rem
+  &_bag
+    background-image: url(../images/ic-bag.svg)
+  &_menu
+    background-image: url(../images/ic-menu-board.svg)
+  &_pay
+    background-image: url(../images/ic-pay.svg)
+
+.page-numbers
+  text-align: center
+  // max-width: 270px
+  margin: 0 auto 120px
+  ul
+    margin-bottom: 0
+    margin-left: -15px
+    margin-right: -15px
+    padding-left: 0
+    li
+      list-style: none
+      display: inline-block
+      text-align: center
+      &:last-child
+        padding-right: 0
+      &.current
+        a,
+        span
+          color: $primary
+  a,
+  span
+    padding: 0 12px
+    display: inline-block
+    color: #091E3F
+    font-size: 15px
+    line-height: 24px
+    // color: $text-light
+  .current
+    color: $primary
+  +mobile
+    margin: 0 auto 30px
+
+.pill
+  padding: 0.286rem 0.857rem
+  border: 1px solid $border
+  border-radius: 1.071rem
+  color: $text
+  display: block
+  max-width: max-content
+  & + .pill
+    margin-left: 0.571rem
+  &.selected
+    color: #FFF
+    border-color: $primary
+    background: $primary
+  &:hover,
+  &:focus
+    color: $text
+    text-decoration: none
+
+.form-group.qty
+  display: flex
+  flex-wrap: wrap
+  max-width: max-content
+  align-items: center
+  .form-control
+    border: 0
+    text-align: center
+    +font-700
+    font-size: 1.286rem
+    line-height: 1.5em
+    margin: 0 0.571rem
+    padding: 0
+    height: auto
+    width: auto
+    font-size: 1rem
+    color: $secn-text
+  .btn-number
+    width: 1.429rem
+    height: 1.429rem
+    background: $primary
+    color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0.357rem
+    border-radius: 50%
+    border: 1px solid $primary
+    text-decoration: none
+    line-height: 1.4285714285714286em
+    &.min
+      border-color: $primary
+      background: transparent
+      color: $primary
+  .btn-number[disabled="disabled"]
+    background: #FFF
+    color: #E6E7E8
+    border-color: #E6E7E8
+    text-decoration: none
+
+
+.fade
+  transition: opacity 0.15s linear
+.fade:not(.in):not(.show)
+  display: none
+.collapse:not(.show)
+  display: none
+.collapsing
+  position: relative
+  height: 0
+  overflow: hidden
+  transition: height 0.35s ease
+@media (prefers-reduced-motion: reduce)
+  .collapsing
+    transition: none
+

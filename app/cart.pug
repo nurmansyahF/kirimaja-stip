@@ -1,0 +1,107 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "cart";
+
+
+block content
+  .cart
+    .cart_head
+      .container
+        .row.justify-content-between
+          .col-3
+            a.button_back(href="home.html") Back
+          .col-9
+            h1 Keranjang pesanan
+    section.cart_listorder
+      .container
+        .listorder_wrap
+          .listorder_item
+            .box-img
+              img(src="images/img-prouct-2.png", alt="img")
+            .box-detail
+              a.del(href="#")
+                img(src="images/ic-close-black.svg")
+              .detail
+                h4.name
+                  a(href="product-detail.html") Pempek Palembang Cak Molek
+                .varian
+                  p Varian: <span>Mini</span>
+                .price-qty.row
+                  .col-6
+                    b.price Rp 157.000
+                  .co-6
+                    .form-group.qty
+                      a.btn-number.min(href="#" data-type="minus" data-field="quant[1]" disabled="disabled") -
+                      input.type-hidden(type="hidden" name="size" value="1")
+                      input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="1" min="1" max="20")
+                      a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]") +
+          .listorder_item
+            .box-img
+              img(src="images/img-prouct-2.png", alt="img")
+            .box-detail
+              a.del(href="#")
+                img(src="images/ic-close-black.svg")
+              .detail
+                h4.name
+                  a(href="product-detail.html") Bolu Meranti
+                .varian
+                  p Varian: <span>Coklat</span>
+                .price-qty.row
+                  .col-6
+                    b.price Rp 246.000
+                  .co-6
+                    .form-group.qty
+                      a.btn-number.min(href="#" data-type="minus" data-field="quant[1]" disabled="disabled") -
+                      input.type-hidden(type="hidden" name="size" value="1")
+                      input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="1" min="1" max="20")
+                      a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]") +
+
+    section.cart_shipingdetail
+      .container
+        h3 Informasi pengiriman pesanan
+        form(action="#")
+          .form-group
+            label Nama pemesan
+            input.form-control(type="text" placeholder="Masukan nama pemesan")
+          .form-group
+            label No. HP
+            input.form-control(type="text" placeholder="Masukan no HP")
+            small Diutamakan terhubung dengan WhatsApp
+          .form-group
+            label Email
+            input.form-control(type="email" placeholder="Masukan alamat email")
+          .form-group
+            label Alamat tujuan
+            input.form-control(type="text " placeholder="Masukan alamat tujuan pengiriman")
+          .form-group
+            label Kecamatan
+            select.select(title="Pilih kecamatan")
+              option(value="option 1") Option 1
+              option(value="option 2") Option 2
+              option(value="option 3") Option 3
+              option(value="option 4") Option 4
+              option(value="option 5") Option 5
+
+          .form-group
+            label Kode pos
+            input.form-control(type="text " placeholder="Masukan kode pos")
+          .form-group
+            label Informasi tambahan <span>(opsional)</span>
+            textarea.form-control(placeholder="Masukan informasi tambahan")
+            small Patokan lokasi, nomor lokasi, atau detail lokasi
+
+    section.grandtotal
+      .container
+        .row
+          .col-5
+            .grandtotal-val
+              p Total pembayaran
+              b Rp 403.000
+          .col-7
+            a.btn.btn_primary(href='#')
+              .icon.icon_pay
+              span Bayar sekarang
+
+
+

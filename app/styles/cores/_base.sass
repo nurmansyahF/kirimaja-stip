@@ -1,0 +1,174 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* Common */
+/* ------------------------------------------------------------------------------------------------ */
+*, *:after, *:before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+
+/* Typography */
+
+p
+  margin: 0 0 24px
+  padding: 0
+  &:last-child
+    margin: 0
+  strong,b
+    @extend %text-bold
+  em,i
+    font-style: italic
+  u
+    text-decoration: underline
+  a:hover
+    text-decoration: underline
+  &:last-child
+    margin-bottom: 0
+
+h1, h2, h3, h4
+  margin: 0 0 1.143rem
+  +font-700
+  font-variant-ligatures: common-ligatures
+  font-feature-settings: "liga","clig"
+  color: $secn-text
+
+h1
+  font-size: 1.857rem
+  line-height: 2.5714285714285716em
+
+h2
+  font-size: 1.571rem
+  line-height: 1.4545454545454546em
+
+h3
+  font-size: 1.286rem
+  line-height: 1.5555555555555556em
+
+h4
+  font-size: 1rem
+  line-height: 1.5714285714285714em
+
+.lead p
+  // @extend %text-bold
+  font-size: 21px
+  line-height: 32px
+
+article
+  p
+    word-break: keep-all
+    /* Non standard for webkit */
+    -webkit-hyphens: none
+    -moz-hyphens: none
+    -ms-hyphens: none
+    hyphens: none
+    margin: 0 0 20px
+    &:last-child
+      margin: 0
+  a
+    &:hover
+      text-decoration: underline
+
+  blockquote
+    font-style: italic
+
+  li
+    ul, ol
+      margin: 0 20px
+      padding-top: 10px
+
+  ul, ol
+    margin: 0 0 30px
+    padding-left: 25px
+    &:last-child
+      margin: 0
+    li
+      margin-bottom: 10px
+      &:last-child
+        margin: 0
+  ul
+    list-style-type: disc
+  ol
+    list-style-type: decimal
+    ol
+      list-style: lower-alpha
+      ol
+        list-style: lower-roman
+        ol
+          list-style: lower-alpha
+
+.text-center,
+%text-center
+  text-align: center
+
+.text-right,
+%text-right
+  text-align: right
+
+.text-left,
+%text-left
+  text-align: left
+
+.text-bold,
+%text-bold
+  font-weight: 700
+
+.text-semibold,
+%text-semibold
+  font-weight: 600
+
+.text-regular,
+%text-regular
+  font-weight: 400
+
+.text-capital,
+%text-capital
+  text-transform: uppercase
+
+
+/* Base */
+*, *:after, *:before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+img
+  max-width: 100%
+
+hr
+  border-top: 1px solid $border
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section
+  display: block
+
++responsive(0,1200px)
+  *
+    &::-webkit-scrollbar-track
+      background-color: #FFF
+    &::-webkit-scrollbar
+      width: 10px
+      background-color: #FFF
+    &::-webkit-scrollbar-thumb
+      border: 1px solid #FFF
+      border-width: 3px 0 3px 1px
+      background-color: $primary
+
+main
+
+#wrap
+  width: 100vw
+  background: #FFF
+  +responsive(0, 366px)
+    max-width: 365px
+    margin: 0 auto
+
+html, body
+  font-size: 14px
+  line-height: 22px
+  font-family: "Nunito Regular", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif
+  font-weight: normal
+  padding: 0
+  margin: 0
+  background-color: #DEDEDE
+  color: $text
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased

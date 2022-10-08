@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>KirimAja - Stip | Powered by Garuda Indonesia Group</title>
+    <meta name="description" content=""/>
+    <meta name="theme-color" content="#00A59B"/>
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="stylesheet" href="styles/plugins.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="web-wrapper" id="page">
+        <header class="header" id="header"></header>
+        <main>
+          <div class="cart">
+            <div class="cart_head">
+              <div class="container">
+                <div class="row justify-content-between">
+                  <div class="col-3"><a class="button_back" href="home.html">Back</a></div>
+                  <div class="col-9">
+                    <h1>Keranjang pesanan</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="cart_listorder">
+              <div class="container">
+                <div class="listorder_wrap">
+                  <div class="listorder_item">
+                    <div class="box-img"><img src="images/img-prouct-2.png" alt="img"/></div>
+                    <div class="box-detail"><a class="del" href="#"><img src="images/ic-close-black.svg"/></a>
+                      <div class="detail">
+                        <h4 class="name"><a href="product-detail.html">Pempek Palembang Cak Molek</a></h4>
+                        <div class="varian">
+                          <p>Varian: <span>Mini</span></p>
+                        </div>
+                        <div class="price-qty row">
+                          <div class="col-6"><b class="price">Rp 157.000</b></div>
+                          <div class="co-6">
+                            <div class="form-group qty"><a class="btn-number min" href="#" data-type="minus" data-field="quant[1]" disabled="disabled">-</a>
+                              <input class="type-hidden" type="hidden" name="size" value="1"/>
+                              <input class="form-control input-number" type="number" placeholder="" name="quant[1]" value="1" min="1" max="20"/><a class="btn-number plus" href="#" data-type="plus" data-field="quant[1]">+</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="listorder_item">
+                    <div class="box-img"><img src="images/img-prouct-2.png" alt="img"/></div>
+                    <div class="box-detail"><a class="del" href="#"><img src="images/ic-close-black.svg"/></a>
+                      <div class="detail">
+                        <h4 class="name"><a href="product-detail.html">Bolu Meranti</a></h4>
+                        <div class="varian">
+                          <p>Varian: <span>Coklat</span></p>
+                        </div>
+                        <div class="price-qty row">
+                          <div class="col-6"><b class="price">Rp 246.000</b></div>
+                          <div class="co-6">
+                            <div class="form-group qty"><a class="btn-number min" href="#" data-type="minus" data-field="quant[1]" disabled="disabled">-</a>
+                              <input class="type-hidden" type="hidden" name="size" value="1"/>
+                              <input class="form-control input-number" type="number" placeholder="" name="quant[1]" value="1" min="1" max="20"/><a class="btn-number plus" href="#" data-type="plus" data-field="quant[1]">+</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="cart_shipingdetail">
+              <div class="container">
+                <h3>Informasi pengiriman pesanan</h3>
+                <form action="#">
+                  <div class="form-group">
+                    <label>Nama pemesan</label>
+                    <input class="form-control" type="text" placeholder="Masukan nama pemesan"/>
+                  </div>
+                  <div class="form-group">
+                    <label>No. HP</label>
+                    <input class="form-control" type="text" placeholder="Masukan no HP"/><small>Diutamakan terhubung dengan WhatsApp</small>
+                  </div>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input class="form-control" type="email" placeholder="Masukan alamat email"/>
+                  </div>
+                  <div class="form-group">
+                    <label>Alamat tujuan</label>
+                    <input class="form-control" type="text " placeholder="Masukan alamat tujuan pengiriman"/>
+                  </div>
+                  <div class="form-group">
+                    <label>Kecamatan</label>
+                    <select class="select" title="Pilih kecamatan">
+                      <option value="option 1">Option 1</option>
+                      <option value="option 2">Option 2</option>
+                      <option value="option 3">Option 3</option>
+                      <option value="option 4">Option 4</option>
+                      <option value="option 5">Option 5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Kode pos</label>
+                    <input class="form-control" type="text " placeholder="Masukan kode pos"/>
+                  </div>
+                  <div class="form-group">
+                    <label>Informasi tambahan <span>(opsional)</span></label>
+                    <textarea class="form-control" placeholder="Masukan informasi tambahan"></textarea><small>Patokan lokasi, nomor lokasi, atau detail lokasi</small>
+                  </div>
+                </form>
+              </div>
+            </section>
+            <section class="grandtotal">
+              <div class="container">
+                <div class="row">
+                  <div class="col-5">
+                    <div class="grandtotal-val">
+                      <p>Total pembayaran</p><b>Rp 403.000</b>
+                    </div>
+                  </div>
+                  <div class="col-7"><a class="btn btn_primary" href="#">
+                      <div class="icon icon_pay"></div><span>Bayar sekarang</span></a></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+    <script src="plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script src="plugins/bootstrap/popper.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/hbaloadimages/hbaloadimages.min.js"></script>
+    <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

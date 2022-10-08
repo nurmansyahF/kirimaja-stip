@@ -1,0 +1,110 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "product-detail";
+
+
+block content
+  .product_detail
+    .product_detail-head
+      .container
+        .row.justify-content-between
+          .col
+            a.button_back(href="home.html") Back
+          .col
+            .button_cart
+              .button_cart-qty
+                span 0
+              a(href="#")
+                img(src="images/ic-cart.svg", alt="ic")
+    section.product_detail-img
+      .box-img
+        img(src="images/img-product-detail-1.png", alt="img")
+
+    section.product_detail-item
+      .container
+        .description
+          .locality Makanan khas Palembang
+          h1.name Pempek Palembang Cak Molek
+          .description
+            p Pempek adalah salah satu makanan tradisional khas Palembang. Makanan yang diolah dari Ikan dan Sagu ini bisa dengan sangat mudah ditemukan di Kota Palembang.
+        .variants
+          h4 Opsi varian/ukuran
+          .variants_wrap
+            a.variants-item.active(href="product-detail.html")
+              .variants-thumb
+                img(src="images/thumb-variant.png", alt="img")
+              .variants-name Mini
+            a.variants-item(href="product-detail.html")
+              .variants-thumb
+                img(src="images/thumb-variant.png", alt="img")
+              .variants-name Sedang
+            a.variants-item(href="product-detail.html")
+              .variants-thumb
+                img(src="images/thumb-variant.png", alt="img")
+              .variants-name Jumbo
+        .quantity
+          h4 Jumlah pesanan
+          .form-group.qty
+            a.btn-number.min(href="#" data-type="minus" data-field="quant[1]" disabled="disabled") -
+            input.type-hidden(type="hidden" name="size" value="1")
+            input.form-control.input-number(type="number" placeholder="" name="quant[1]" value="1" min="1" max="20")
+            a.btn-number.plus(href="#" data-type="plus" data-field="quant[1]") +
+
+      .product_detail-more
+        .container
+          h3 Makanan khas Palembang lainnya
+          .product_wrap.row
+            .col-6
+              .product_card
+                .box-img
+                  a(href="product-detail.html")
+                    img(src="images/img-product-3.png", alt="img")
+                .box-text
+                  h4
+                    a(href="product-detail.html") Semur Sapi Khas Palembang Aline Box
+                  .price
+                    span Rp 92.000
+            .col-6
+              .product_card
+                .box-img
+                  a(href="product-detail.html")
+                    img(src="images/img-product-3.png", alt="img")
+                .box-text
+                  h4
+                    a(href="product-detail.html") Semur Sapi Khas Palembang Aline Box
+                  .price
+                    span Rp 92.000
+            .col-6
+              .product_card
+                .box-img
+                  a(href="product-detail.html")
+                    img(src="images/img-product-3.png", alt="img")
+                .box-text
+                  h4
+                    a(href="product-detail.html") Semur Sapi Khas Palembang Aline Box
+                  .price
+                    span Rp 92.000
+
+    a.add_cart(href="#modalCart" data-toggle="modal")
+      span.text + &nbsp; Tambah ke keranjang
+      span.price Rp 157.000
+
+block modal
+  .modal.modalCart(id="modalCart" tabindex="-1")
+    .modal-dialog.modal-dialog-centered.modal-lg
+      .modal-content
+        .modal-header
+          .btn-close(href="#" data-dismiss="modal" aria-label="close")
+            img(src="images/ic-close-black.svg")
+        .modal-body
+          .img-cart
+            img(src="images/img-cart-modal.svg", alt="img")
+          h3 Berhasil menambahkan menu ini ke dalam keranjang pesanan
+          a.btn.btn_primary.btn_block(href="cart.html")
+            i.icon.icon_bag
+            span Lihat keranjang
+          a.btn.btn_border.btn_block(href="home.html")
+            i.icon.icon_menu
+            span Order menu makanan lain
+

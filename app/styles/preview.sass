@@ -1,0 +1,147 @@
+// Color
+$primary      : #f28a1e
+$secondary    : #112233
+$text         : #091E3F
+$secn-text    : #212121
+$border       : #CCCCCC
+$bg-gray      : #F7F7F7
+$bg-dark      : #030402
+
+.preview
+  min-height: 100vh
+  padding: 40px 0
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: 16px
+  line-height: 24px
+  background: #F9F9FA
+  position: relative
+
+  .card-wrap
+    min-width: 300px
+    background-color: #FFF
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15)
+    border-radius: 6px
+    overflow: hidden
+    position: relative
+    z-index: 2
+    .card-header
+      padding: 0
+      margin-bottom: 0
+      background-color: transparent
+      border: 0
+    .card-body
+      padding: 0
+      margin: 0
+      background-color: #FFF
+      overflow: hidden
+    .card-label
+      text-align: center
+      text-transform: uppercase
+      background: #FFF
+      color: $text
+      font-size: 10px
+      line-height: 24px
+      letter-spacing: 5px
+      padding: 7px 20px
+      border-bottom: 1px solid $border
+      font-weight: 600
+    .card-title
+      text-align: center
+      padding: 0
+      border-top: 4px solid darken($primary, 10%)
+      border-bottom: 4px solid darken($primary, 10%)
+      padding: 20px 0
+      margin: 0
+      // background: $primary
+      img
+        max-width: 220px
+
+    .card-list
+      padding: 0
+      margin: 0
+      list-style: none
+      background-color: #FFF
+      &> .card-item
+        width: 100%
+        margin: 0
+        &> a
+          display: block
+          color: $text
+          padding: 15px 20px
+          width: 100%
+          background-color: transparent
+          border-bottom: 1px solid $border
+          font-weight: 500
+          transition: all .5s
+          position: relative
+          &:before
+            content: ""
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: $primary
+            z-index: 1
+            transform: scale(.3)
+            opacity: 0
+            transition: all .3s
+          span
+            position: relative
+            z-index: 2
+          i
+            float: right
+            line-height: 24px
+            transform: rotate(-90deg)
+            transition: transform .3s
+        &:hover > a
+          color: #FFF
+          text-decoration: none
+          border-bottom: 1px solid darken($primary, 10%)
+          &:before
+            width: 100%
+            transform: scale(1)
+            opacity: 1
+          i
+            transform: rotate(0)
+        &:hover > .card-sub-list
+          padding: 10px 0
+          border-bottom: 1px solid #e2e2e2
+          &> .card-item
+            max-height: 99px
+            padding: 0 10px
+            opacity: 1
+            visibility: visible
+
+      .card-sub-list
+        padding: 0
+        margin: 0
+        list-style: none
+        background-color: lighten($primary, 5%)
+        transition: all .3s
+        &> .card-item
+          width: 100%
+          padding: 0 10px
+          max-height: 0
+          padding: 0
+          opacity: 0
+          visibility: hidden
+          transition: max-height .5s, opacity .5s, padding .5s
+          &> a
+            padding: 10px 10px
+            display: block
+            color: #FFF
+            width: 100%
+            border: 1px solid transparent
+            background-color: transparent
+            border: 0
+            transition: all .5s
+          &:hover
+            &> a
+              background-color: $primary
+              text-decoration: none
+
+

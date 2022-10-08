@@ -1,0 +1,117 @@
+/* Animations */
+
+// body
+//   // transform: translateY(100px) scale(0.99)
+//   position: relative
+//   top: 50px
+//   opacity: 0
+//   transition: all .5s linear
+//   &.ready
+//     transform: none
+//     top: 0
+//     opacity: 1
+//     // transition: transform .3s linear, opacity 1s ease
+//     transition: all .5s linear
+
+//   &.transition
+//     // transform: translateY(-100px) scale(0.99)
+//     top: -50px
+//     opacity: 0
+//     transition: all .5s linear
+
+// Push
+@-webkit-keyframes hvr-push
+  50%
+    -webkit-transform: scale(0.95)
+    transform: scale(0.95)
+
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+@keyframes hvr-push
+  50%
+    -webkit-transform: scale(0.95)
+    transform: scale(0.95)
+
+  100%
+    -webkit-transform: scale(1)
+    transform: scale(1)
+
+@mixin hvr-push
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+  &:hover,
+  &:focus,
+  &:active
+    -webkit-animation-name: hvr-push
+    animation-name: hvr-push
+    -webkit-animation-duration: 0.3s
+    animation-duration: 0.3s
+    -webkit-animation-timing-function: linear
+    animation-timing-function: linear
+    -webkit-animation-iteration-count: 1
+    animation-iteration-count: 1
+
+// Pop
+@-webkit-keyframes hvr-pop
+  50%
+    -webkit-transform: scale(1.2)
+    transform: scale(1.2)
+
+@keyframes hvr-pop
+  50%
+    -webkit-transform: scale(1.2)
+    transform: scale(1.2)
+
+@mixin hvr-pop
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+  &:hover,
+  &:focus,
+  &:active
+    -webkit-animation-name: hvr-pop
+    animation-name: hvr-pop
+    -webkit-animation-duration: 0.3s
+    animation-duration: 0.3s
+    -webkit-animation-timing-function: linear
+    animation-timing-function: linear
+    -webkit-animation-iteration-count: 1
+    animation-iteration-count: 1
+
+
+@keyframes topright
+  from
+    transform: rotate(-90deg)
+  to
+    transform: rotate(0)
+
+@keyframes topleft
+  0%
+    right: -50%
+  50%
+    right: -40%
+  100%
+    right: -30%
+@keyframes toplefts
+  0%
+    right: -50%
+  100%
+    right: -20%
+@keyframes topleftsm
+  0%
+    right: -90%
+  100%
+    right: -110%
+
+@keyframes toprights
+  0%
+    right: -60%
+  100%
+    right: -90%

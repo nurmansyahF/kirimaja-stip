@@ -1,0 +1,300 @@
+/* Form */
+label
+  display: block
+  +font-700()
+  margin: 0 0 4px
+  color: $secn-text
+
+.form-control
+  display: block
+  width: 100%
+  height: 3rem
+  padding: 0.75rem 1rem
+  font-size: 1rem
+  line-height: 1.5em
+  +font-400()
+  color: $text
+  background-color: #FFF
+  background-clip: padding-box
+  border: 1px solid rgba(101, 101, 103, 0.3)
+  border-radius: 0.5rem
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+  &::placeholder
+    color: rgba(101, 101, 103, 0.7)
+  &:focus
+    border-color: $primary
+    // box-shadow: 0px 0px 0px 1px $primary
+    box-shadow: none !important
+    outline: none !important
+textarea.form-control
+  min-height: 10rem
+  height: auto
+  resize: none
+
+.form-group
+  padding-bottom: 0.857rem
+  &:last-child
+    padding-bottom: 0
+  &.mb,
+  &.mb:last-child
+    padding-bottom: 1rem
+  &.mt,
+  &.mt:last-child
+    padding-top: 1rem
+
+
+select.select
+  display: block
+  width: 100%
+  height: 2.5rem
+  border: 1px solid $border
+  border-radius: 0.25rem
+  padding: 0.5rem 0.75rem
+  opacity: 0
+
+.custom-control
+  position: relative
+  z-index: 1
+  display: block
+  min-height: 1.5rem
+  padding: 0.5rem 0 0.5rem 2rem
+  color-adjust: exact
+  &-input
+    position: absolute
+    left: 0
+    z-index: -1
+    width: 1rem
+    height: 1.25rem
+    opacity: 0
+    &:checked ~ .custom-control-label::before
+      color: #FFF
+      border-color: $primary
+      background-color: $primary
+    &:focus ~ .custom-control-label::before
+      border-color: $primary
+    &:focus:not(:checked) ~ .custom-control-label::before
+      border-color: $primary
+    &:not(:disabled):active ~ .custom-control-label::before
+      color: #FFF
+      background-color: $primary
+      border-color: $primary
+    &[disabled] ~ .custom-control-label,
+    &:disabled ~ .custom-control-label
+      color: $text
+    &[disabled] ~ .custom-control-label::before,
+    &:disabled ~ .custom-control-label::before
+      background-color: $text
+
+  &-label
+    position: relative
+    margin-bottom: 0
+    vertical-align: top
+    cursor: pointer
+    &::before
+      position: absolute
+      top: 0.125rem
+      left: -2rem
+      display: block
+      width: 1.25rem
+      height: 1.25rem
+      pointer-events: none
+      content: ""
+      background-color: #FFF
+      border: 1px solid $border
+    &::after
+      position: absolute
+      top: 0.125rem
+      left: -2rem
+      display: block
+      width: 1.25rem
+      height: 1.25rem
+      content: ""
+      background-repeat: no-repeat
+      background-size: 0.75rem 0.75rem
+      background-position: center
+
+  &-inline
+    display: inline-block
+    &+ .custom-control-inline
+      margin-left: 1rem
+
+.custom-checkbox
+  .custom-control-label::before
+    border-radius: 2px
+  .custom-control-input:checked ~ .custom-control-label::after
+    background-image: url(../images/ic-check.svg)
+  .custom-control-input:disabled:checked ~ .custom-control-label::before
+    opacity: 0.5
+
+.custom-checkbox-alt
+  .custom-control-label::before
+    border-radius: 2px
+  .custom-control-input:checked ~ .custom-control-label::after
+    background-image: url(../images/ic-check-alt.svg)
+  .custom-control-input:disabled:checked ~ .custom-control-label::before
+    opacity: 0.5
+
+.custom-radio
+  .custom-control-label::before
+    border-radius: 50%
+  .custom-control-input:checked ~ .custom-control-label::after
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e")
+  .custom-control-input:disabled:checked ~ .custom-control-label::before
+    opacity: 0.5
+
+.form-group
+  padding-bottom: 1.5rem
+  &:last-child
+    padding-bottom: 0
+  &.mb,
+  &.mb:last-child
+    padding-bottom: 1rem
+  &.mt,
+  &.mt:last-child
+    padding-top: 1rem
+
+
+.form-action
+  padding-top: .5rem
+  padding-bottom: 1.5rem
+  .btn:not(.btn-block) + .btn:not(.btn-block)
+    margin-left: 1rem
+  .btn-block + .btn-block
+    margin-top: 0.5rem
+  &:last-child
+    padding-bottom: 0
+
+
+// GRAVITY FORM
+body #start_project *
+  outline: none !important
+
+body #start_project .gform_wrapper
+  margin: 0 !important
+
+body #start_project .form-group
+  padding: 0 0 1rem
+  margin: 0
+
+body #start_project .form-group .ginput_container
+  margin: 0 !important
+  padding: 0 !important
+
+body #start_project .form-group input
+  margin: 0 !important
+  display: block
+  height: auto
+  width: 100% !important
+  font-size: 1.125rem
+  line-height: 1.5em
+  border-radius: 0
+  border: 0
+  border-bottom: 1px solid #C9CED7
+  padding: 1rem 0
+
+body #start_project .form-group textarea
+  margin: 0 !important
+  display: block
+  height: 168px
+  width: 100% !important
+  font-size: 1.125rem
+  line-height: 1.5em
+  border-radius: 0
+  border: 0
+  border-bottom: 1px solid #C9CED7
+  padding: 1rem 0
+
+body #start_project .gform_footer
+  margin: 0 !important
+  padding: 0.5rem 0 0 !important
+  text-align: right
+
+body #start_project .gform_button
+  display: inline-block
+  +font-400()
+  text-align: center
+  vertical-align: middle
+  user-select: none
+  border: 1px solid transparent
+  padding: 0.4375rem 1rem
+  font-size: 1rem
+  line-height: 1.5em
+  border-radius: 0.25rem
+  transition: all .3s ease-in-out
+  color: #FFF
+  background-color: $primary
+  border-color: $primary
+  margin: 0
+  &:hover
+    color: #FFF
+    background-color: darken($primary, 5%)
+    border-color: darken($primary, 5%)
+  &:focus, &.focus
+    outline: none
+    box-shadow: none
+    color: #FFF
+    background-color: darken($primary, 8%)
+    border-color: darken($primary, 8%)
+  &.disabled, &:disabled
+    pointer-events: none
+    color: $text
+    background-color: #FFF
+    border-color: $border
+    opacity: 1
+  &:not(:disabled):not(.disabled)
+    cursor: pointer
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active
+    color: #FFF
+    background-color: darken($primary, 5%)
+    border-color: darken($primary, 5%)
+
+.gform_ajax_spinner
+  float: left
+  padding: 12px
+
+// ERRORS
+body
+  #start_project
+    .validation_error
+      display: none
+    li.gfield.gfield_error,
+    li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning
+      border: 0
+      padding: 0
+      margin: 0 !important
+      max-width: 100% !important
+      width: 100% !important
+      background: transparent
+    .validation_message
+      padding: 0.5rem 0 1rem
+      color: red
+      background: transparent
+      +font-400()
+      font-weight: normal
+
+// gform success
+.gform_confirmation_message
+  position: relative
+  padding: 1.5rem 2rem 1.5rem 3.5rem
+  background: #d1e7dd
+  color: #0f5132
+  border-radius: 2px
+  margin: 24px 0
+  font-size: 1rem
+  line-height: 1.5em
+  &:before
+    content: ""
+    display: block
+    width: 1.5em
+    height: 1.5em
+    background: transparent url(../images/ic-correct.svg) no-repeat center
+    background-size: contain
+    position: absolute
+    top: 1.5rem
+    left: 1.5rem
+.gform_wrapper .gform_validation_errors>h2 .gform-icon
+  left: -34px !important
+.gform_wrapper .gfield_validation_message, .gform_wrapper .validation_message
+  padding: 8px !important
+  padding-top: 8px !important

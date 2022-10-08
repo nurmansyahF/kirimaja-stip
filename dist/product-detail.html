@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>KirimAja - Stip | Powered by Garuda Indonesia Group</title>
+    <meta name="description" content=""/>
+    <meta name="theme-color" content="#00A59B"/>
+    <link rel="shortcut icon" href="favicon.png"/>
+    <link rel="stylesheet" href="styles/plugins.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="web-wrapper" id="page">
+        <header class="header" id="header"></header>
+        <main>
+          <div class="product_detail">
+            <div class="product_detail-head">
+              <div class="container">
+                <div class="row justify-content-between">
+                  <div class="col"><a class="button_back" href="home.html">Back</a></div>
+                  <div class="col">
+                    <div class="button_cart">
+                      <div class="button_cart-qty"><span>0</span></div><a href="#"><img src="images/ic-cart.svg" alt="ic"/></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="product_detail-img">
+              <div class="box-img"><img src="images/img-product-detail-1.png" alt="img"/></div>
+            </section>
+            <section class="product_detail-item">
+              <div class="container">
+                <div class="description">
+                  <div class="locality">Makanan khas Palembang</div>
+                  <h1 class="name">Pempek Palembang Cak Molek</h1>
+                  <div class="description">
+                    <p>Pempek adalah salah satu makanan tradisional khas Palembang. Makanan yang diolah dari Ikan dan Sagu ini bisa dengan sangat mudah ditemukan di Kota Palembang.</p>
+                  </div>
+                </div>
+                <div class="variants">
+                  <h4>Opsi varian/ukuran</h4>
+                  <div class="variants_wrap"><a class="variants-item active" href="product-detail.html">
+                      <div class="variants-thumb"><img src="images/thumb-variant.png" alt="img"/></div>
+                      <div class="variants-name">Mini</div></a><a class="variants-item" href="product-detail.html">
+                      <div class="variants-thumb"><img src="images/thumb-variant.png" alt="img"/></div>
+                      <div class="variants-name">Sedang</div></a><a class="variants-item" href="product-detail.html">
+                      <div class="variants-thumb"><img src="images/thumb-variant.png" alt="img"/></div>
+                      <div class="variants-name">Jumbo</div></a></div>
+                </div>
+                <div class="quantity">
+                  <h4>Jumlah pesanan</h4>
+                  <div class="form-group qty"><a class="btn-number min" href="#" data-type="minus" data-field="quant[1]" disabled="disabled">-</a>
+                    <input class="type-hidden" type="hidden" name="size" value="1"/>
+                    <input class="form-control input-number" type="number" placeholder="" name="quant[1]" value="1" min="1" max="20"/><a class="btn-number plus" href="#" data-type="plus" data-field="quant[1]">+</a>
+                  </div>
+                </div>
+              </div>
+              <div class="product_detail-more">
+                <div class="container">
+                  <h3>Makanan khas Palembang lainnya</h3>
+                  <div class="product_wrap row">
+                    <div class="col-6">
+                      <div class="product_card">
+                        <div class="box-img"><a href="product-detail.html"><img src="images/img-product-3.png" alt="img"/></a></div>
+                        <div class="box-text">
+                          <h4><a href="product-detail.html">Semur Sapi Khas Palembang Aline Box</a></h4>
+                          <div class="price"><span>Rp 92.000</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="product_card">
+                        <div class="box-img"><a href="product-detail.html"><img src="images/img-product-3.png" alt="img"/></a></div>
+                        <div class="box-text">
+                          <h4><a href="product-detail.html">Semur Sapi Khas Palembang Aline Box</a></h4>
+                          <div class="price"><span>Rp 92.000</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="product_card">
+                        <div class="box-img"><a href="product-detail.html"><img src="images/img-product-3.png" alt="img"/></a></div>
+                        <div class="box-text">
+                          <h4><a href="product-detail.html">Semur Sapi Khas Palembang Aline Box</a></h4>
+                          <div class="price"><span>Rp 92.000</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section><a class="add_cart" href="#modalCart" data-toggle="modal"><span class="text">+ &nbsp; Tambah ke keranjang</span><span class="price">Rp 157.000</span></a>
+          </div>
+        </main>
+        <footer class="footer"></footer>
+      </div>
+    </div>
+    <div class="modal modalCart" id="modalCart" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="btn-close" href="#" data-dismiss="modal" aria-label="close"><img src="images/ic-close-black.svg"/></div>
+          </div>
+          <div class="modal-body">
+            <div class="img-cart"><img src="images/img-cart-modal.svg" alt="img"/></div>
+            <h3>Berhasil menambahkan menu ini ke dalam keranjang pesanan</h3><a class="btn btn_primary btn_block" href="cart.html"><i class="icon icon_bag"></i><span>Lihat keranjang</span></a><a class="btn btn_border btn_block" href="home.html"><i class="icon icon_menu"></i><span>Order menu makanan lain</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="plugins/jquery/jquery-3.4.1.min.js"></script>
+    <script src="plugins/bootstrap/popper.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="plugins/hbaloadimages/hbaloadimages.min.js"></script>
+    <script src="plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script src="plugins/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

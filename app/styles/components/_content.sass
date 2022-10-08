@@ -1,0 +1,375 @@
+/* Contents */
+
+.home
+  &_masthead
+    padding: 0
+    position: relative
+    &-bg
+      position: absolute
+      width: 100%
+      padding: 17.77% 0
+      max-height: 120px
+      top: 0
+      left: 0
+      overflow: hidden
+      img
+        display: block
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        object-fit: cover
+    &-text
+      position: relative
+      z-index: 2
+      padding: 2rem 0
+      color: #fff
+      h1
+        font-size: 1.714rem
+        line-height: 1em
+        +font-700()
+        margin-bottom: 4px
+        color: #FFF
+    .button_cart
+      position: absolute
+      top: 2rem
+      right: 1.143rem
+      background: #fff
+      border: 0
+
+  &_banner
+
+
+  &_product
+    h3
+      // margin-bottom: 0.571rem
+
+.product
+  &_category
+    max-width: 100%
+    padding-left: 1.143rem
+    overflow-x: auto
+    display: flex
+    &::-webkit-scrollbar-track
+      background-color: #FFF
+    &::-webkit-scrollbar
+      width: 1px
+      background-color: #FFF
+    &::-webkit-scrollbar-thumb
+      border: 1px solid #FFF
+      border-width: 1px 0 1px 1px
+      background-color: $primary
+      border-radius: 20px
+      display: none
+  &_wrap
+  &_card
+    margin-bottom: 1.143rem
+    .box-img
+      width: 100%
+      padding: 38.46% 0
+      border-radius: 0.429rem
+      overflow: hidden
+      position: relative
+      margin-bottom: 0.571rem
+      img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+        position: absolute
+        top: 0
+        left: 0
+    .box-text
+      h4
+        font-weight: 400
+        margin-bottom: 0.571rem
+        a
+          color: $secn-text
+          &:hover
+            color: $primary
+            text-decoration: none
+    .price
+      .discount
+        font-size: 0.857rem
+        line-height: 1.5em
+        color: #939598
+        text-decoration: line-through
+        padding-right: 0.286rem
+      span:not(.discount)
+        font-weight: 800
+        color: $primary
+
+
+.product_detail
+  section
+    padding: 0
+  &-head
+    padding: 0.857rem 0
+    background: #FFF
+    .row
+      .col
+        &:last-child
+          display: flex
+          justify-content: flex-end
+
+  &-img
+    .box-img
+      width: 100%
+      padding: 45.835% 0
+      position: relative
+      img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        position: absolute
+        top: 0
+        left: 0
+
+  &-item
+    padding: 1.714rem 0 !important
+    background: #FFF
+    border-radius: 1.714rem 1.714rem 0 0
+    position: relative
+    margin-top: -1.714rem
+    .description
+      margin-bottom: 1.714rem
+      .locality
+        font-size: 0.857rem
+        line-height: 1.5em
+      .name
+        font-size: 1.286rem
+        line-height: 1.5em
+        margin-bottom: 0
+
+    .variants
+      margin-bottom: 1.714rem
+      h4
+        font-size: 1rem
+        line-height: 1.5rem
+        +font-700
+        margin-bottom: 0.571rem
+      &_wrap
+        width: 100%
+        display: flex
+        overflow-x: auto
+        &::-webkit-scrollbar-track
+          background-color: #FFF
+        &::-webkit-scrollbar
+          width: 1px
+          background-color: #FFF
+        &::-webkit-scrollbar-thumb
+          border: 1px solid #FFF
+          border-width: 1px 0 1px 1px
+          background-color: $primary
+          border-radius: 20px
+          display: none
+      &-item
+        display: flex
+        flex-wrap: wrap
+        border: 1px solid #6D6E71
+        padding: 0.286rem 0.571rem
+        border-radius: 6px
+        align-items: center
+        justify-content: space-between
+        & + .variants-item
+          margin-left: 0.857rem
+        &.active
+          border-color: $primary
+          .variants-name
+            color: $primary
+        &:hover
+          text-decoration: none
+      &-thumb
+        width: 2.286rem
+        height: 2.286rem
+        flex: 0 0 2.286rem
+        border-radius: 6px
+        overflow: hidden
+        position: relative
+        margin-right: 0.571rem
+        img
+          width: 100%
+          height: 100%
+          position: absolute
+          object-fit: cover
+          object-position: center
+      &-name
+        width: 100%
+        max-width: calc(100% - 2.857rem)
+        flex: 0 0 calc(100% - 2.857rem)
+        color: $text
+
+    .quantity
+      h4
+        font-size: 1rem
+        line-height: 1.5rem
+        +font-700
+        margin-bottom: 0.571rem
+
+  &-more
+    border-top: 1px solid #F5F5F5
+    margin-top: 1.714rem
+    padding: 1.714rem 0 2.857rem
+    .product_wrap
+      flex-wrap: nowrap
+      overflow-x: auto
+      &::-webkit-scrollbar-track
+        background-color: #FFF
+      &::-webkit-scrollbar
+        width: 1px
+        background-color: #FFF
+      &::-webkit-scrollbar-thumb
+        border: 1px solid #FFF
+        border-width: 1px 0 1px 1px
+        background-color: $primary
+        border-radius: 20px
+        display: none
+
+  .add_cart
+    position: fixed
+    left: 16px
+    right: 16px
+    bottom: 16px
+    display: flex
+    justify-content: space-between
+    width: 100%
+    max-width: calc(360px - 2.286rem)
+    margin: 0 auto
+    padding: 0.857rem 1.143rem
+    background: $primary
+    color: #FFF
+    border: 1px solid $primary
+    border-radius: 6px
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03)
+    .price
+      +font-700
+      padding-left: 1.143rem
+      margin-left: 1.143rem
+      border-left: 1px solid #FFF
+      text-align: right
+    &:hover
+      text-decoration: none
+
+
+.modalCart
+  .modal
+    &-header
+      position: relative
+      .btn-close
+        position: absolute
+        top: 0
+        right: 0
+    &-body
+      text-align: center
+      .img-cart
+        width: 5.143rem
+        height: 5.143rem
+        margin: 0 auto 0.571rem
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+      h3
+        font-size: 1.286rem
+        line-height: 1.5555555555555556em
+        margin-bottom: 1.714rem
+
+
+.cart
+  &_head
+    padding: 0.857rem 0
+    background: #FFF
+    .row
+      align-items: center
+      .col
+        &:last-child
+          display: flex
+          justify-content: flex-end
+    h1
+      font-size: 1.286rem
+      line-height: 1.5555555555555556em
+      margin-bottom: 0
+  &_listorder
+
+  .listorder
+    &_wrap
+    &_item
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding: 24px 0
+      border-top: 1px solid #E6E7E8
+      border-bottom: 1px solid #E6E7E8
+      .box-img
+        flex: 0 0 100px
+        max-width: 100%
+        max-height: 72px
+        position: relative
+        border-radius: 6px
+        overflow: hidden
+        img
+          width: 100%
+          height: 100%
+          position: absolute
+          top: 0
+          left: 0
+          object-fit: cover
+          object-position: center
+      .box-detail
+        flex: 0 0 calc(100% - 112px)
+        position: relative
+        .del
+          position: absolute
+          top: 0
+          right: 0
+          width: 20px
+          height: 20px
+          img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            object-position: center
+        .name
+          margin-bottom: 0
+          a
+            display: block
+            width: 100%
+            max-width: 188px
+            white-space: nowrap
+            text-overflow: ellipsis
+            overflow: hidden
+            color: $secn-text
+
+        .varian
+          margin-bottom: 8px
+          p
+            span
+              color: $secn-text
+
+        .price-qty
+          align-items: center
+          .col-6
+            display: flex
+            align-items: center
+          .price
+            color: $primary
+
+  .grandtotal
+    padding: 16px 0
+    border-top: 1px solid #E6E7E8
+    &-val
+      p
+        margin-bottom: 0
+        font-size: 12px
+        line-height: 18px
+        color: #19191A
+      b
+        font-size: 18px
+        line-height: 28px
+        +font-700
+        color: $primary
+
+

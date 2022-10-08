@@ -1,0 +1,208 @@
+/* Custom Plugins */
+.block-slider
+  padding-bottom: 45px
+  &.owl-carousel
+    .item
+      display: block
+  .owl-stage-outer
+    position: relative
+    z-index: 2
+  .owl-nav
+    position: absolute
+    z-index: 1
+    bottom: 0
+    right: -100px
+    width: 100%
+    height: 120px
+    text-align: right
+    button.owl-next,
+    button.owl-prev
+      width: 50px
+      height: 75px
+      background-color: $primary
+      display: inline-block
+      transition: all .3s ease
+      position: relative
+      color: #FFFFFF
+      &.disabled
+        opacity: .5
+      &:focus
+        outline: none
+      &:hover:not(.disabled)
+        opacity: 1
+        background-color: darken($primary, 5%)
+
+  +maxtablet
+    .owl-nav
+      position: relative
+      right: 0
+      height: auto
+      text-align: center
+      button.owl-next,
+      button.owl-prev
+        width: 30px
+        height: 47px
+        font-size: 13px
+
+
+.owl-carousel
+  position: relative
+  display: block
+  .owl-dots
+    text-align: left
+    position: relative
+    width: 100%
+    line-height: 8px
+    // padding-top: 48px
+    .owl-dot
+      display: inline-block
+      vertical-align: middle
+      margin-right: 15px
+      width: auto
+      position: relative
+      span
+        display: block
+        width: 12px
+        height: 12px
+        border-radius: 6px
+        background-color: #CECECE
+        border: 0
+      &:focus
+        outline: none !important
+      &.active
+        span
+          background-color: #62BB46
+          opacity: 1
+
+
+.tooltip
+  position: relative
+  .arrow
+    position: absolute
+    width: 0
+    height: 0
+    border-color: transparent
+    border-style: solid
+    bottom: 0
+    left: 50%
+    margin-left: -5px
+    border-width: 20px 15px 0
+    border-top-color: #212121
+    margin-bottom: 19px
+  &-inner
+    background: #212121
+    color: #ffffff
+    font-size: 15px
+    line-height: 24px
+    padding: 19px 24px
+    border-radius: 4px
+    max-width: 280px
+    margin-bottom: 38px
+
+.fade
+  transition: opacity 0.15s linear
+
+.fade:not(.in):not(.show)
+  display: none
+
+
+.collapse:not(.show)
+  display: none
+
+.collapsing
+  position: relative
+  height: 0
+  overflow: hidden
+  transition: height 0.35s ease
+
+@media (prefers-reduced-motion: reduce)
+  .collapsing
+    transition: none
+
+body.modal-open
+  overflow: hidden
+  .header
+    z-index: 9
+
+.modal
+  position: fixed
+  z-index: 11
+  top: 0
+  left: 0
+  width: 101%
+  height: 100vh
+  overflow: auto
+  display: none
+  transition: all .5s
+  &:not(.show)
+    opacity: 0
+    .modal-dialog
+      transform: translate(0,-30px)
+  .modal-dialog
+    max-width: 328px
+    padding: 24px
+    background: #fff
+    margin: 10vh auto
+    transition: all .5s ease-out
+    position: relative
+    border: 1px solid #E2E2E2
+    box-shadow: 0 20px 40px 0 rgba(0,0,0,0.5)
+    border-radius: 12px
+    h3
+      text-align: center
+  .close-btn
+    position: absolute
+    top: 16px
+    right: 16px
+    width: 24px
+    display: block
+    opacity: .3
+    transition: all .3s
+    cursor: pointer
+    &:hover
+      opacity: .7
+  .form-group
+    text-align: left
+  a.back
+    margin: 0 0 40px
+  h3
+    font-weight: bold
+    margin: 0 0 12px
+    font-size: 26px;	line-height: 31px;
+  p
+    margin: 0 0 24px !important
+  .range_slider
+    margin-bottom: 30px
+  .ctrip_range
+    margin-top: 0
+
+  &-bottom
+    top: auto
+    bottom: 0
+    background: rgba(#fff,.8)
+    &:not(.show)
+      .modal-dialog
+        transform: translate(0,50%)
+    h2
+      display: inline-block
+      margin: 0 0 30px
+      font-size: 22px;
+      letter-spacing: -0.07px;
+      line-height: 27px;
+
+    .modal-dialog
+      position: fixed
+      bottom: 0
+      left: 0
+      right: 0
+      min-height: 0
+
+.modal-backdrop
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(25, 25, 26, 0.5)
+  z-index: 10
+  transition: all .3s ease
