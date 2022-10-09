@@ -39,7 +39,7 @@
           style: 'select-control',
           size: size,
           liveSearchPlaceholder: 'Search here..',
-          width: "100%",
+          width: "100%"
         });
         // console.log(size);
       });
@@ -84,16 +84,49 @@
         })
       }
     })
+
+    $('.slider-prdct').each(function(){
+      var t = $(this),
+          nItem = t.children().length;
+      if (nItem > 1){
+        t.owlCarousel({
+          lazyLoad: false,
+          items: 1,
+          loop: false,
+          dots: false,
+          nav: false,
+          margin: 8,
+          center: false,
+          autoplay: false,
+          autoplayTimeout: 8000,
+          autoplaySpeed: 1200,
+          onInitialized  : counter, //When the plugin has initialized.
+          onTranslated : counter //When the translation of the stage has finished.
+          // animateIn: 'fadeIn',
+          // animateOut: 'fadeOut'
+        })
+      }
+      function counter(event) {
+        var element   = event.target;         // DOM element, in this example .owl-carousel
+         var items     = event.item.count;     // Number of items
+         var item      = event.item.index + 1;     // Position of the current item
+
+       // it loop is true then reset counter from 1
+       if(item > items) {
+         item = item - items
+       }
+       $('#counter').html(item+"/"+items)
+     }
+    });
     function sliderBanner(){
       $('.slider-banner').each(function(){
         var t = $(this),
             nItem = t.children().length;
         if (nItem > 1){
-          t.addClass('owl-carousel');
           t.owlCarousel({
-            lazyLoad: true,
+            lazyLoad: false,
             items: 1,
-            loop: true,
+            loop: false,
             dots: false,
             nav: false,
             margin: 8,
@@ -106,15 +139,12 @@
           })
         }
       });
-    }
+    }sliderBanner();
 
-
-    setTimeout(function() {
-      sliderBanner();
-    }, 800);
     //SLIDER EXTRA SMALL
     function sliderXS() {
       var sliderS = $('.slider-xs');
+      console.log($(window).width());
       if ($(window).width() < 767) {
         sliderS.addClass('owl-carousel');
         sliderS.owlCarousel({

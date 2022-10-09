@@ -74,6 +74,87 @@
           background-color: #62BB46
           opacity: 1
 
+.btn.dropdown-toggle
+  @extend .form-control
+  background: #FFF
+  border: 1px solid #454545
+  border-radius: 8px
+  color: #8A8A8A
+  position: relative
+  &:after
+    content: ""
+    width: 16px
+    height: 16px
+    position: absolute
+    top: 13px
+    right: .5rem
+    background: url(../images/ic-chevrons-down.svg)
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+
+.dropdown-menu
+  position: absolute
+  top: 100%
+  left: 0
+  z-index: 1000
+  display: none
+  float: left
+  min-width: 10rem
+  padding: 0.5rem 0
+  margin: 0.125rem 0 0
+  font-size: 1rem
+  color: $text
+  text-align: left
+  list-style: none
+  background-color: #FFF
+  background-clip: padding-box
+  border: 1px solid rgba(101, 101, 103, 0.3)
+  border-radius: 0.25rem
+  box-shadow: 0px 12px 20px rgba(20, 20, 22, 0.2)
+  .bs-searchbox
+    padding: 0
+    border-bottom: 1px solid #3D3D41
+    position: relative
+    &:before
+      content: ""
+      position: absolute
+      top: 7px
+      left: 0.875rem
+      width: 1.5rem
+      height: 1.5rem
+      background: url(../images/ic-search.svg)
+    .form-control
+      border: 0
+      padding-left: 2.75rem
+
+.dropdown-menu.show
+  display: block
+  max-width: 100% !important
+  min-width: 333px
+
+.dropdown-item
+  display: block
+  width: 100%
+  padding: 0.4rem 1rem
+  clear: both
+  font-size: 0.875rem
+  line-height: 1.429em
+  font-weight: 400
+  color: $text
+  text-align: inherit
+  white-space: nowrap
+  background-color: transparent
+  border: 0
+  &:hover
+    background: lighten($primary, 10%)
+    color: #FFF
+  &:focus
+    outline: none
+  &.active
+    background: $border
+    color: $text
+
 
 .tooltip
   position: relative
