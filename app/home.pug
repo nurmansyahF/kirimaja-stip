@@ -3,6 +3,20 @@ extends templates/layout.pug
 block vars
   - var activepage = "home";
 
+block header
+  header.header(id="header")
+    .container
+      .row.justify-content-between
+        .col-5
+          .header__logo
+            a(href="home.html")
+              img(src="images/logo-kirimaja-stip-colored.svg", alt="logo")
+        .col-5
+          .button_cart
+            .button_cart-qty
+              span 0
+            a(href="cart.html")
+              img(src="images/ic-cart.svg", alt="ic")
 
 block content
   .home

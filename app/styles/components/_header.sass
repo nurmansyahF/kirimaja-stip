@@ -1,1 +1,48 @@
 /* Header */
+.header
+  width: 100%
+  max-width: 365px
+  padding: 0.75rem 0
+  background: #fff
+  position: fixed
+  top: -70px
+  left: 0
+  right: 0
+  margin: 0 auto
+  z-index: 99
+  transition: all .3s ease-in-out
+  opacity: 0
+  visibility: hidden
+  .row
+    align-items: center
+  .col-5
+    &:last-child
+      display: flex
+      justify-content: flex-end
+  &.sticky
+    top: 0
+    visibility: visible
+    opacity: 1
+  &.product_head
+    padding: 0.857rem 0
+    background: #FFF
+    top: 0
+    opacity: 1
+    visibility: visible
+    .row
+      .col
+        &:last-child
+          display: flex
+          justify-content: flex-end
+  .cart_head
+    .col
+      &-9
+        display: flex
+        align-items: center
+        justify-content: space-arround
+        .button_back
+          margin-right: 1.143rem
+      &-3
+        display: flex
+        align-items: center
+        justify-content: flex-end

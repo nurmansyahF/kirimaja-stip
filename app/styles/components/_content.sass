@@ -47,6 +47,7 @@
 
 
   &_product
+    padding-top: 0
     h3
       // margin-bottom: 0.571rem
 
@@ -68,6 +69,12 @@
       border-radius: 20px
       display: none
   &_wrap
+    margin-left: -8px
+    margin-right: -8px
+    [class^="col-"],
+    [class*=" col-"]
+      padding-left: 8px
+      padding-right: 8px
   &_card
     margin-bottom: 1.143rem
     .box-img
@@ -107,16 +114,9 @@
 
 
 .product_detail
+  padding-top: 4rem
   section
     padding: 0
-  &-head
-    padding: 0.857rem 0
-    background: #FFF
-    .row
-      .col
-        &:last-child
-          display: flex
-          justify-content: flex-end
 
   &-img
     position: relative
@@ -380,6 +380,14 @@
   .grandtotal
     padding: 16px 0
     border-top: 1px solid #E6E7E8
+    width: 100%
+    max-width: 365px
+    background: #FFF
+    position: fixed
+    left: 0
+    right: 0
+    bottom: 0
+    margin: 0 auto
     &-val
       p
         margin-bottom: 0
@@ -391,5 +399,11 @@
         line-height: 28px
         +font-700
         color: $primary
+    .col-7
+      display: flex
+      justify-content: flex-end
 
+  &_shipingdetail
+    padding-top: 0
+    padding-bottom: 5.714rem
 

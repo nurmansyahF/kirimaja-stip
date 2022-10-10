@@ -221,16 +221,15 @@ body.modal-open
       transform: translate(0,-30px)
   .modal-dialog
     max-width: 328px
-    padding: 24px
-    background: #fff
     margin: 10vh auto
     transition: all .5s ease-out
     position: relative
-    border: 1px solid #E2E2E2
-    box-shadow: 0 20px 40px 0 rgba(0,0,0,0.5)
-    border-radius: 12px
     h3
       text-align: center
+    &-centered
+      display: flex
+      align-items: center
+      min-height: calc(100% - (0.5rem * 2))
   .close-btn
     position: absolute
     top: 16px
@@ -277,7 +276,12 @@ body.modal-open
       left: 0
       right: 0
       min-height: 0
-
+  &-content
+    padding: 24px
+    background: #fff
+    border: 1px solid #E2E2E2
+    box-shadow: 0 20px 40px 0 rgba(0,0,0,0.5)
+    border-radius: 12px
 .modal-backdrop
   position: fixed
   top: 0
