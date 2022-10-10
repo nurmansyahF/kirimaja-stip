@@ -201,6 +201,7 @@
     transition: none
 
 body.modal-open
+  height: 100vh
   overflow: hidden
   .header
     z-index: 9
@@ -221,7 +222,7 @@ body.modal-open
       transform: translate(0,-30px)
   .modal-dialog
     max-width: 328px
-    margin: 10vh auto
+    margin: 0 auto
     transition: all .5s ease-out
     position: relative
     h3
@@ -277,6 +278,7 @@ body.modal-open
       right: 0
       min-height: 0
   &-content
+    margin-left: -0.438rem
     padding: 24px
     background: #fff
     border: 1px solid #E2E2E2

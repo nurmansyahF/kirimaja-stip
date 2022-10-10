@@ -95,7 +95,7 @@
           loop: false,
           dots: false,
           nav: false,
-          margin: 8,
+          margin: 0,
           center: false,
           autoplay: false,
           autoplayTimeout: 8000,
@@ -190,22 +190,19 @@
 
     // FIXED MENU
     function fixedHeader() {
-      if($('header').length > 0 && $(window).width() > 1025){
+      if($('header').length > 0){
         var $header = $('#header'),
             $windowH = $(window).height(),
-            $pos = $header.outerHeight();
+            $pos = $header.outerHeight(),
+            $pos2 = 128;
 
         $(window).scroll(function(){
           var $top = $(window).scrollTop();
-          if($top > $pos) {
+          if($top > $pos2) {
             $header.addClass('fixed');
-            // setTimeout(function(){
               $header.addClass('sticky');
-            // }, 700)
           } else {
-            // setTimeout(function(){
               $header.removeClass('sticky');
-            // }, 700)
             $header.removeClass('fixed');
           }
           if($top == 0) {

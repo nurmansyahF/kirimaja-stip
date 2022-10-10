@@ -38,6 +38,10 @@ block content
               .variants-thumb
                 img(src="images/thumb-variant.png", alt="img")
               .variants-name Jumbo
+            a.variants-item(href="product-detail.html")
+              .variants-thumb
+                img(src="images/thumb-variant.png", alt="img")
+              .variants-name Jumbo
         .quantity
           h4 Jumlah pesanan
           .form-group.qty
@@ -80,10 +84,10 @@ block content
                     a(href="product-detail.html") Semur Sapi Khas Palembang Aline Box
                   .price
                     span Rp 92.000
-
-    a.add_cart(href="#modalCart" data-toggle="modal")
-      span.text + &nbsp; Tambah ke keranjang
-      span.price Rp 157.000
+    .add_cart-wrap
+      a.add_cart(href="#modalCart" data-toggle="modal")
+        span.text + &nbsp; Tambah ke keranjang
+        span.price Rp 157.000
 
 block modal
   .modal.modalCart(id="modalCart" tabindex="-1")
