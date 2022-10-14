@@ -294,6 +294,19 @@
         }
     });
 
+    // Btn copy
+    function copyme(){
+      $('.connotes').each(function(){
+        var t = $(this),
+            s = t.find('span'),
+            c = t.find('.copy');
+        c.on('click', function(){
+          var d = s.html();
+          document.execCommand("copy");
+        })
+      })
+    }copyme();
+
   }
 
 })();

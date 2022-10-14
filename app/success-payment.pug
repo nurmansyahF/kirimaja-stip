@@ -1,0 +1,68 @@
+extends templates/layout.pug
+
+block vars
+  - var activepage = "cart";
+
+block header
+
+block content
+  .success_payment
+    .container
+      .masthead
+        a.btn-close(href="home.html")
+          img(src="images/ic-close-black.svg", alt="ic")
+        .box-icon
+          img(src="images/icon-big-chekc.svg", alt="ic")
+        h3 Pembayaran berhasil dan pesanan Sohib segera kami proses
+      .connote_list
+        .connote_item
+          .box-icon
+            img(src="images/connote-item.svg", alt="icon")
+          .box-detail
+            .connote-number
+              small No Resi (Connote)
+              .connotes
+                span 280120887
+                a.copy(href="#")
+                  .icon.icon_copy
+            .detail-product
+              b Makanan khas Palembang
+              ul
+                li
+                  .qty 1x
+                  .product-name
+                    span Pempek Palembang Cak Molek
+                    small Varian: <b>Mini</b>
+                li
+                  .qty 1x
+                  .product-name
+                    span Kerupuk Kemplang
+        .connote_item
+          .box-icon
+            img(src="images/connote-item.svg", alt="icon")
+          .box-detail
+            .connote-number
+              small No Resi (Connote)
+              .connotes
+                span 280120888
+                a.copy(href="#")
+                  .icon.icon_copy
+            .detail-product
+              b Makanan khas Palembang
+              ul
+                li
+                  .qty 1x
+                  .product-name
+                    span Pempek Palembang Cak Molek
+                    small Varian: <b>Mini</b>
+                li
+                  .qty 1x
+                  .product-name
+                    span Kerupuk Kemplang
+
+      .message-box
+        .icon.icon_info
+        .text
+          p Screenshot halaman ini dan masukan nomor resi pesananmu di <a href="#">kirimaja.id/lacak-kiriman</a> atau aplikasi KirimAja (android dan ios)
+
+

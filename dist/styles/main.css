@@ -312,6 +312,14 @@ button:focus, a:focus { outline: none !important; }
 
 .icon_pay { background-image: url(../images/ic-pay.svg); }
 
+.icon_wa { background-image: url(../images/ic-whatsapp-footer.svg); }
+
+.icon_check { background-image: url(../images/ic-check.svg); }
+
+.icon_info { background-image: url(../images/ic-info.svg); }
+
+.icon_copy { background-image: url(../images/ic-copy.svg); }
+
 .page-numbers { text-align: center; margin: 0 auto 120px; }
 
 .page-numbers ul { margin-bottom: 0; margin-left: -15px; margin-right: -15px; padding-left: 0; }
@@ -345,6 +353,12 @@ button:focus, a:focus { outline: none !important; }
 .form-group.qty .btn-number.min { border-color: #00A59B; background: transparent; color: #00A59B; }
 
 .form-group.qty .btn-number[disabled="disabled"] { background: #FFF; color: #E6E7E8; border-color: #E6E7E8; text-decoration: none; }
+
+.btn-close { position: absolute; top: 0; right: 0; }
+
+.message-box { background: #F1F9FE; padding: 0.857rem; border-radius: 6px; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+
+.message-box .icon_info { width: 1.143rem; height: 1.143rem; -webkit-flex: 0 0 1.143rem; -ms-flex: 0 0 1.143rem; flex: 0 0 1.143rem; max-width: 1.143rem; margin-right: 0.571rem; margin-top: 2px; }
 
 .fade { transition: opacity 0.15s linear; }
 
@@ -507,6 +521,12 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 @media (max-width: 325px) { .header .cart_head .col-9 .button_back { margin-right: .5rem; } }
 
 /* Footer */
+.footer { padding: 0 1.143rem; max-width: 365px; margin: 0 auto; background: #FFF; }
+
+.footer .container { padding: 1.143rem 0; border-top: 1px solid #E6E7E8; }
+
+.footer a { color: #315FE7; }
+
 /* Contents */
 .home_masthead { padding: 0; position: relative; }
 
@@ -679,6 +699,50 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 .cart .grandtotal .col-7 { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
 
 .cart_shipingdetail { padding-top: 0; padding-bottom: 5.714rem; }
+
+.success_payment { padding-bottom: 3.429rem; }
+
+.success_payment .masthead { position: relative; padding: 3.286rem 0 1.143rem; }
+
+.success_payment .masthead .btn-close { width: 1.714rem; height: 1.714rem; position: absolute; top: 1.143rem; right: 0; }
+
+.success_payment .masthead .btn-close img { width: 100%; height: 100%; object-fit: contain; }
+
+.success_payment .masthead .box-icon { width: 5.143rem; height: 5.143rem; margin: 0 auto 1.143rem; }
+
+.success_payment .masthead .box-icon img { width: 100%; height: 100%; object-fit: contain; }
+
+.success_payment .masthead h3 { text-align: center; font-family: "Nunito Bold", sans-serif; font-weight: 700; margin-bottom: 0; }
+
+.success_payment .connote_item { padding: 0.857rem; border: 1px solid #E6E7E8; border-radius: 6px; display: -webkit-flex; display: -ms-flexbox; display: flex; margin-bottom: 1.143rem; }
+
+.success_payment .connote_item .box-icon { width: 2.857rem; height: 2.857rem; margin-right: 0.857rem; }
+
+.success_payment .connote_item .box-icon img { display: block; width: 100%; height: 100%; object-fit: contain; }
+
+.success_payment .connote_item .box-detail { max-width: calc(100% - 3.714rem); -webkit-flex: 0 0 calc(100% - 3.714rem); -ms-flex: 0 0 calc(100% - 3.714rem); flex: 0 0 calc(100% - 3.714rem); }
+
+.success_payment .connote_item .box-detail .connote-number { margin-bottom: 0.857rem; }
+
+.success_payment .connote_item .box-detail .connote-number .connotes { padding-right: 1.714rem; position: relative; }
+
+.success_payment .connote_item .box-detail .connote-number .connotes span { font-family: "Nunito Bold", sans-serif; font-weight: 700; color: #19191A; }
+
+.success_payment .connote_item .detail-product > b { font-family: "Nunito Bold", sans-serif; font-weight: 700; color: #000000; display: block; margin-bottom: 0.286rem; }
+
+.success_payment .connote_item .detail-product ul { padding-left: 0; list-style: none; margin-bottom: 0; }
+
+.success_payment .connote_item .detail-product ul li { display: -webkit-flex; display: -ms-flexbox; display: flex; }
+
+.success_payment .connote_item .detail-product ul li .qty { font-family: "Nunito Bold", sans-serif; font-weight: 700; color: #000; }
+
+.success_payment .connote_item .detail-product ul li .product-name { padding-left: 0.571rem; }
+
+.success_payment .connote_item .detail-product ul li .product-name span { display: block; color: #19191A; font-family: "Nunito Semibold", sans-serif; font-weight: 600; }
+
+.success_payment .connote_item .detail-product ul li .product-name small { color: #939598; }
+
+.success_payment .connote_item .detail-product ul li .product-name small b { font-family: "Nunito Regular", sans-serif; font-weight: 400; }
 
 /* Responsive */
 
