@@ -269,6 +269,9 @@
     box-shadow: 0px -2px 10px rgba(31, 31, 31, 0.05)
     margin: 0 auto
     max-width: 365px
+    transition: all .3s ease-in-out
+    &.fixed-to-footer
+      bottom: 55px
   .add_cart
     display: flex
     justify-content: space-between
@@ -407,6 +410,11 @@
     right: 0
     bottom: 0
     margin: 0 auto
+    background: #FFF
+    transition: all .3s ease-in-out
+    z-index: 3
+    &.fixed-to-footer
+      bottom: 55px
     &-val
       p
         margin-bottom: 0

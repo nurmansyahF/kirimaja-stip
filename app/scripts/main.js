@@ -307,6 +307,41 @@
       })
     }copyme();
 
+    var $document = $(document),
+        $element = $('.footer'),
+        className = 'hasScrolled';
+
+    if($('.add_cart-wrap').length > 0  || $('.grandtotal').length > 0){
+      console.log($('.add_cart-wrap').length)
+      console.log($('.grandtotal').length)
+      $element.addClass(className);
+    }
+    // if($('.grandtotal').length < 1){
+    //   $('.footer').addClass('fixed-to-footer');
+    // }
+
+    // $document.scroll(function() {
+    //   if ($document.scrollTop() >= 50) {
+    //     // user scrolled 50 pixels or more;
+    //     // do stuff
+    //     // if($('.add_cart-wrap').length > 0){
+    //     //   $('.add_cart-wrap').addClass('fixed-to-footer');
+    //     // }
+    //     // if($('.grandtotal').length > 0){
+    //     //   $('.grandtotal').addClass('fixed-to-footer');
+    //     // }
+    //     // $element.addClass(className);
+    //   } else {
+    //     // if($('.add_cart-wrap').length > 0){
+    //     //   $('.add_cart-wrap').removeClass('fixed-to-footer');
+    //     // }
+    //     // if($('.grandtotal').length > 0){
+    //     //   $('.grandtotal').removeClass('fixed-to-footer');
+    //     // }
+    //     // $element.removeClass(className);
+    //   }
+    // });
+
   }
 
 })();

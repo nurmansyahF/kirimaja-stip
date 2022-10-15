@@ -527,6 +527,10 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .footer a { color: #315FE7; }
 
+.footer.hasScrolled { padding-bottom: 82px; }
+
+.footer.fixed-to-footer { padding-bottom: 0; }
+
 /* Contents */
 .home_masthead { padding: 0; position: relative; }
 
@@ -634,7 +638,9 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .product_detail-more .product_wrap::-webkit-scrollbar-thumb { border: 1px solid #FFF; border-width: 1px 0 1px 1px; background-color: #00A59B; border-radius: 20px; display: none; }
 
-.product_detail .add_cart-wrap { position: fixed; z-index: 5; left: 0; right: 0; bottom: 0; padding: 1.143rem; background: #FFF; border: 1px solid #E6E7E8; box-shadow: 0px -2px 10px rgba(31, 31, 31, 0.05); margin: 0 auto; max-width: 365px; }
+.product_detail .add_cart-wrap { position: fixed; z-index: 5; left: 0; right: 0; bottom: 0; padding: 1.143rem; background: #FFF; border: 1px solid #E6E7E8; box-shadow: 0px -2px 10px rgba(31, 31, 31, 0.05); margin: 0 auto; max-width: 365px; transition: all .3s ease-in-out; }
+
+.product_detail .add_cart-wrap.fixed-to-footer { bottom: 55px; }
 
 .product_detail .add_cart { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; width: 100%; max-width: calc(360px - 2.286rem); margin: 0 auto; padding: 0.857rem 1.143rem; background: #00A59B; color: #FFF; border: 1px solid #00A59B; border-radius: 6px; box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03); }
 
@@ -690,7 +696,9 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .cart .listorder_item .box-detail .price-qty .price { color: #00A59B; }
 
-.cart .grandtotal { padding: 16px 0; border-top: 1px solid #E6E7E8; width: 100%; max-width: 365px; background: #FFF; position: fixed; left: 0; right: 0; bottom: 0; margin: 0 auto; }
+.cart .grandtotal { padding: 16px 0; border-top: 1px solid #E6E7E8; width: 100%; max-width: 365px; background: #FFF; position: fixed; left: 0; right: 0; bottom: 0; margin: 0 auto; background: #FFF; transition: all .3s ease-in-out; z-index: 3; }
+
+.cart .grandtotal.fixed-to-footer { bottom: 55px; }
 
 .cart .grandtotal-val p { margin-bottom: 0; font-size: 12px; line-height: 18px; color: #19191A; }
 
