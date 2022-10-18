@@ -37,10 +37,11 @@ block content
               a.del(href="#")
                 img(src="images/ic-close-black.svg")
               .detail
-                h4.name
-                  a(href="product-detail.html") Pempek Palembang Cak Molek
-                .varian
-                  p Varian: <span>Mini</span>
+                .detail-top
+                  h4.name
+                    a(href="product-detail.html") Pempek Palembang Cak Molek
+                  .varian
+                    p Varian: <span>Mini</span>
                 .price-qty.row
                   .col-6
                     b.price Rp 157.000
@@ -57,10 +58,11 @@ block content
               a.del(href="#")
                 img(src="images/ic-close-black.svg")
               .detail
-                h4.name
-                  a(href="product-detail.html") Bolu Meranti
-                .varian
-                  p Varian: <span>Coklat</span>
+                .detail-top
+                  h4.name
+                    a(href="product-detail.html") Bolu Meranti
+                  .varian
+                    p Varian: <span>-</span>
                 .price-qty.row
                   .col-6
                     b.price Rp 246.000
@@ -70,6 +72,27 @@ block content
                       input.type-hidden(type="hidden" name="size" value="1")
                       input.form-control.input-number(type="number" placeholder="" name="quant[2]" value="1" min="1" max="20")
                       a.btn-number.plus(href="#" data-type="plus" data-field="quant[2]") +
+          .listorder_item
+            .box-img
+              img(src="images/img-prouct-2.png", alt="img")
+            .box-detail
+              a.del(href="#")
+                img(src="images/ic-close-black.svg")
+              .detail
+                .detail-top
+                  h4.name
+                    a(href="product-detail.html") Bolu Meranti
+                  //- .varian
+                  //-   p Varian: <span>Coklat</span>
+                .price-qty.row
+                  .col-6
+                    b.price Rp 246.000
+                  .co-6
+                    .form-group.qty
+                      a.btn-number.min(href="#" data-type="minus" data-field="quant[3]" disabled="disabled") -
+                      input.type-hidden(type="hidden" name="size" value="1")
+                      input.form-control.input-number(type="number" placeholder="" name="quant[3]" value="1" min="1" max="20")
+                      a.btn-number.plus(href="#" data-type="plus" data-field="quant[3]") +
 
     section.cart_shipingdetail
       .container

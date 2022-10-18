@@ -684,11 +684,13 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .cart .listorder_item { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding: 24px 0; border-top: 1px solid #E6E7E8; border-bottom: 1px solid #E6E7E8; }
 
-.cart .listorder_item .box-img { -webkit-flex: 0 0 100px; -ms-flex: 0 0 100px; flex: 0 0 100px; max-width: 100%; max-height: 72px; position: relative; border-radius: 6px; overflow: hidden; }
+.cart .listorder_item .box-img { -webkit-flex: 0 0 100px; -ms-flex: 0 0 100px; flex: 0 0 100px; max-width: 100%; max-height: 72px; position: relative; border-radius: 6px; overflow: hidden; padding: 11% 0; }
 
 .cart .listorder_item .box-img img { width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; object-position: center; }
 
 .cart .listorder_item .box-detail { -webkit-flex: 0 0 calc(100% - 112px); -ms-flex: 0 0 calc(100% - 112px); flex: 0 0 calc(100% - 112px); position: relative; }
+
+.cart .listorder_item .box-detail .detail-top { min-height: 44px; margin-bottom: 8px; }
 
 .cart .listorder_item .box-detail .del { position: absolute; top: 0; right: 0; width: 20px; height: 20px; }
 
@@ -703,6 +705,8 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 .cart .listorder_item .box-detail .varian p span { color: #19191A; }
 
 .cart .listorder_item .box-detail .price-qty { -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
+
+.cart .listorder_item .box-detail .price-qty .qty { padding-bottom: 0 !important; }
 
 .cart .listorder_item .box-detail .price-qty .col-6 { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
