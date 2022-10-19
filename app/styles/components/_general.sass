@@ -173,16 +173,22 @@ a
   color: $text
   display: block
   max-width: max-content
+  transition: all .3s ease-in-out
   & + .pill
     margin-left: 0.571rem
   &.selected
     color: #FFF
     border-color: $primary
     background: $primary
+    &:hover,
+    &:focus
+      color: #FFF
   &:hover,
   &:focus
-    color: $text
+    color: #FFF
     text-decoration: none
+    border-color: $primary
+    background: $primary
 
 .form-group.qty
   display: flex

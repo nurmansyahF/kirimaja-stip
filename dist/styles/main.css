@@ -336,13 +336,15 @@ button:focus, a:focus { outline: none !important; }
 
 @media (max-width: 767px) { .page-numbers { margin: 0 auto 30px; } }
 
-.pill { padding: 0.286rem 0.857rem; border: 1px solid #939598; border-radius: 1.071rem; color: #6D6E71; display: block; max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; }
+.pill { padding: 0.286rem 0.857rem; border: 1px solid #939598; border-radius: 1.071rem; color: #6D6E71; display: block; max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; transition: all .3s ease-in-out; }
 
 .pill + .pill { margin-left: 0.571rem; }
 
 .pill.selected { color: #FFF; border-color: #00A59B; background: #00A59B; }
 
-.pill:hover, .pill:focus { color: #6D6E71; text-decoration: none; }
+.pill.selected:hover, .pill.selected:focus { color: #FFF; }
+
+.pill:hover, .pill:focus { color: #FFF; text-decoration: none; border-color: #00A59B; background: #00A59B; }
 
 .form-group.qty { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; max-width: -webkit-max-content; max-width: -moz-max-content; max-width: max-content; -webkit-align-items: center; -ms-flex-align: center; align-items: center; }
 
@@ -589,6 +591,10 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 .product_card .price .discount { font-size: 0.857rem; line-height: 1.5em; color: #939598; text-decoration: line-through; padding-right: 0.286rem; }
 
 .product_card .price span:not(.discount) { font-weight: 800; color: #00A59B; }
+
+.product_card .boxic-promo { padding-top: 5px; }
+
+.product_card .boxic-promo .ic-free-ongkir { display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex; width: 5rem; height: 1.714rem; background-image: url(../images/ic-free-ongkir.svg); }
 
 .product_detail { padding-top: 4rem; }
 
