@@ -280,7 +280,7 @@ section { padding: 1.714rem 0; }
 
 button:focus, a:focus { outline: none !important; }
 
-.btn_primary { padding: 0.857rem 1.714rem; border: 1px solid #00A59B; border-radius: 6px; color: #FFF; font-weight: 600; transition: all .3s; display: inline-block; background: #00A59B; }
+.btn_primary { padding: 0.857rem; border: 1px solid #00A59B; border-radius: 6px; color: #FFF; font-weight: 500; transition: all .3s; display: inline-block; background: #00A59B; }
 
 .btn_primary:hover { background: #00A59B; color: #ffffff; text-decoration: none; }
 
@@ -542,6 +542,8 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 .footer.hasScrolled { padding-bottom: 82px; }
 
 .footer.fixed-to-footer { padding-bottom: 0; }
+
+.footer .call-center { text-align: right; }
 
 @media (max-width: 364px) { .footer .call-center { margin-left: -1.5rem; } }
 
