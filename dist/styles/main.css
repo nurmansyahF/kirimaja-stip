@@ -778,7 +778,7 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .success_payment .connote_item .detail-product ul li .product-name small { color: #939598; }
 
-.success_payment .connote_item .detail-product ul li .product-name small b { font-family: "Nunito Regular", sans-serif; font-weight: 400; }
+.success_payment .connote_item .detail-product ul li .product-name small b { color: #19191A; font-family: "Nunito Regular", sans-serif; font-weight: 400; }
 
 /* Responsive */
 
