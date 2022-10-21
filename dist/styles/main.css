@@ -372,7 +372,7 @@ button:focus, a:focus { outline: none !important; }
 
 .message-box.w-close:hover { cursor: pointer; }
 
-.message-box.absolute { position: fixed; z-index: 5; left: 0; right: 0; bottom: 150px; margin: 0 auto; padding: 1.143rem; max-width: 328px; }
+.message-box.absolute { position: fixed; z-index: 5; left: 0; right: 0; bottom: 90px; margin: 0 auto; padding: 1.143rem; max-width: 328px; }
 
 .fade { transition: opacity 0.15s linear; }
 
