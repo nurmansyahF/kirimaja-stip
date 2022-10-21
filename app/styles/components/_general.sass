@@ -134,6 +134,10 @@ a
     background-image: url(../images/ic-info.svg)
   &_copy
     background-image: url(../images/ic-copy.svg)
+  &_alert
+    background-image: url(../images/ic-alert.svg)
+  &_close
+    background-image: url(../images/ic-close-black.svg)
 
 .page-numbers
   text-align: center
@@ -241,13 +245,31 @@ a
   padding: 0.857rem
   border-radius: 6px
   display: flex
-  .icon_info
+  .icon_info,
+  .icon_alert
     width: 1.143rem
     height: 1.143rem
     flex: 0 0 1.143rem
     max-width: 1.143rem
     margin-right: 0.571rem
     margin-top: 2px
+  &.alert
+    background: #FEF2F1
+    color: #DB5959
+  &.w-close
+    padding-right: 2.25rem
+    &:hover
+      cursor: pointer
+  &.absolute
+    position: fixed
+    z-index: 5
+    left: 0
+    right: 0
+    bottom: 150px
+    margin: 0 auto
+    padding: 1.143rem
+    max-width: 328px
+
 
 .fade
   transition: opacity 0.15s linear

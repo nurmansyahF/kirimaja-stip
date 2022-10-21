@@ -342,6 +342,16 @@
     //   }
     // });
 
+    $('.message-box').each(function(){
+      var t = $(this),
+          x = t.find('.close');
+      if(t.hasClass('w-close')){
+        x.click(function(){
+          t.hide();
+        })
+      }
+    })
+
   }
 
 })();

@@ -189,7 +189,7 @@ gulp.task('serve', ['scripts', 'styles','templates'], () => {
         //       will present a certificate warning in the browser.
         // https: true,
         server: ['.tmp', 'app'],
-        port: 3000
+        port: 3004
     });
 
 gulp.watch(['app/**/*.html'], reload);
@@ -214,7 +214,7 @@ browserSync({
     //       will present a certificate warning in the browser.
     // https: true,
     server: 'dist',
-    port: 3001
+    port: 3005
 })
 );
 
