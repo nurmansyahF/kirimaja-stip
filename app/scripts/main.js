@@ -302,7 +302,11 @@
             c = t.find('.copy');
         c.on('click', function(){
           var d = s.html();
-          document.execCommand("copy");
+          var valueText = s.select().html();
+            document.execCommand("copy");
+            // alert("data '" + valueText + "' berhasil di salin" )
+          // document.execCommand("copy");
+          // console.log(d);
         })
       })
     }copyme();

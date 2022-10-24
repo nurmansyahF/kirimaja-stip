@@ -370,6 +370,8 @@ button:focus, a:focus { outline: none !important; }
 
 .message-box.w-close { padding-right: 2.25rem; }
 
+.message-box.w-close .icon_close { margin-right: 0; }
+
 .message-box.w-close:hover { cursor: pointer; }
 
 .message-box.absolute { position: fixed; z-index: 5; left: 0; right: 0; bottom: 90px; margin: 0 auto; padding: 1.143rem; max-width: 328px; }
@@ -560,7 +562,7 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 @media (max-width: 364px) { .footer .call-center { margin-left: -1.5rem; } }
 
 /* Contents */
-.home_masthead { padding: 0; position: relative; }
+.home_masthead { padding: 0; position: relative; height: 130px; }
 
 .home_masthead-bg { position: absolute; width: 100%; padding: 17.77% 0; max-height: 120px; top: 0; left: 0; overflow: hidden; }
 
@@ -575,6 +577,10 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 .home_banner { width: 100%; overflow: hidden; }
 
 .home_banner .slider-banner .owl-stage-outer { overflow: visible; }
+
+.home_banner .slider-banner .item { border-radius: 4px; overflow: hidden; }
+
+.home_banner .slider-banner .item img { border-radius: 4px; }
 
 .home_product { padding-top: 0; }
 
