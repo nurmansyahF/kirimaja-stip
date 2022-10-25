@@ -616,6 +616,10 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .product_card .boxic-promo .ic-free-ongkir { display: -webkit-inline-flex; display: -ms-inline-flexbox; display: inline-flex; width: 5rem; height: 1.714rem; background-image: url(../images/ic-free-ongkir.svg); }
 
+.product_total { margin-bottom: 8px; }
+
+.product_total span { color: #939598; }
+
 .product_detail { padding-top: 4rem; }
 
 .product_detail section { padding: 0; }
