@@ -93,6 +93,21 @@ block content
                       input.type-hidden(type="hidden" name="size" value="1")
                       input.form-control.input-number(type="number" placeholder="" name="quant[3]" value="1" min="1" max="20")
                       a.btn-number.plus(href="#" data-type="plus" data-field="quant[3]") +
+    section.cart_promocode
+      .container
+        h3 Yuk pakai kode promonya!
+        form.form-inline(id="promoCode" action="#")
+          .form-group
+            label Kode promo
+            input.form-control( type="text" placeholder="Masukan kode promo")
+          .form-action
+            button.btn.btn_border.mute(type="submit") Gunakan kode
+        .error-text
+          span Kode promo tidak ditemukan
+        .total-promo
+          span Kamu akan menghemat
+          | &nbsp;
+          b Rp 16.000
 
     section.cart_shipingdetail
       .container
@@ -145,4 +160,75 @@ block content
               span Bayar sekarang
 
 
+block addscript
+  script.
+    $('#promoCode').each(function() {
+      var form = $(this),
+          inpt = form.find('.form-control'),
+          btn = form.find('.btn'),
+          et = form.siblings('.error-text'),
+          tp = form.siblings('.total-promo');
 
+      inpt.on('input', function() {
+        if (this.value.trim()) {
+          btn.removeClass('mute');
+        } else {
+          btn.addClass('mute');
+        }
+      });
+
+      form.on('click', '.btn', function(e) {
+        e.preventDefault();
+        if (form.hasClass('code-found')) {
+          form.removeClass('code-found');
+          btn.removeClass('cancel').html('Gunakan kode');
+          inpt.val('').trigger('input');
+          et.hide();
+          tp.hide();
+        } else {
+          if (!inpt.val()) return;
+          if (inpt.val() === 'KIRIMAJARAMADHAN10') {
+            form.addClass('code-found');
+            btn.addClass('cancel').html('Batal');
+            et.hide();
+            tp.show();
+          } else {
+            form.find('.form-group').addClass('error');
+            et.show();
+            tp.hide();
+          }
+        }
+      });
+    });
+
+
+
+    //- $('#promoCode').each(function(){
+    //-   var t = $(this),
+    //-       inpt = t.find('.form-control'),
+    //-       btn = t.find('.btn'),
+    //-       et = t.siblings('.error-text'),
+    //-       tp = t.siblings('.total-promo');
+    //-   inpt.on("keyup change", function(e) {
+    //-     if($(this).val() != ""){
+    //-       btn.removeClass('mute');
+    //-     }else{
+    //-       btn.addClass('mute');
+    //-     }
+    //-   })
+    //-   btn.on('click', function(){
+    //-     if(inpt.val() != "" && inpt.val() == "KIRIMAJARAMADHAN10"){
+    //-       t.addClass('code-found');
+    //-       btn.addClass('cancel').html('Batal');
+    //-       et.show();
+    //-       tp.hide();
+    //-     }else{
+    //-       t.find('.form-group').addClass('error');
+    //-       et.hide();
+    //-       tp.show();
+    //-     }
+    //-     if($(this).hasClass('cancel')){
+    //-       $(this).removeClass('cancel').html('Gunakan kode');
+    //-     }
+    //-   })
+    //- })

@@ -421,6 +421,10 @@ textarea.form-control, textarea.btn.dropdown-toggle { min-height: 10rem; height:
 
 .form-group small { font-size: 0.857rem; line-height: 1.5em; margin-top: 0.286rem; display: block; }
 
+.form-group.error .form-control, .form-group.error .btn.dropdown-toggle { border-color: #DB5959; }
+
+.form-group.error .error-text { display: block; }
+
 select.select { display: block; width: 100%; height: 2.5rem; border: 1px solid #939598; border-radius: 0.25rem; padding: 0.5rem 0.75rem; opacity: 0; }
 
 .custom-control { position: relative; z-index: 1; display: block; min-height: 1.5rem; padding: 0.5rem 0 0.5rem 2rem; color-adjust: exact; }
@@ -757,6 +761,38 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 .cart_shipingdetail h3 + .message-box { margin-top: -0.571rem; }
 
 .cart_shipingdetail .message-box { margin-bottom: 0.571rem; }
+
+.cart_promocode { background: #F1FEFD; }
+
+.cart_promocode h3 { margin-bottom: 8px; }
+
+.cart_promocode .form-inline { display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; -webkit-flex-flow: row wrap; flex-flow: row wrap; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
+
+.cart_promocode .form-group { margin-right: 8px; margin-bottom: 0; padding-bottom: 0 !important; }
+
+.cart_promocode .form-control, .cart_promocode .btn.dropdown-toggle { min-width: 14.813rem; }
+
+.cart_promocode .btn_border { padding: 9px 12px; background: #FFF; min-width: 8.214rem; }
+
+.cart_promocode .btn_border:hover { background: #00A59B; }
+
+.cart_promocode .btn_border.disable, .cart_promocode .btn_border.blank, .cart_promocode .btn_border.mute { background: #FFF; border-color: #939598; color: #939598; pointer-events: none; }
+
+.cart_promocode .btn_border.disable:hover, .cart_promocode .btn_border.blank:hover, .cart_promocode .btn_border.mute:hover { color: #FFF; background: #939598; }
+
+.cart_promocode .btn_border.error, .cart_promocode .btn_border.cancel { border-color: #CB2E0C; color: #CB2E0C; }
+
+.cart_promocode .btn_border.error:hover, .cart_promocode .btn_border.cancel:hover { background: #CB2E0C; color: #FFF; }
+
+.cart_promocode .error-text { color: #DB5959; padding-top: 4px; display: none; }
+
+.cart_promocode .total-promo { padding-top: 4px; display: none; }
+
+.cart_promocode .total-promo span { color: #6D6E71; }
+
+.cart_promocode .total-promo b { color: #00A59B; }
+
+.cart_promocode .code-found .total-promo { display: block; }
 
 .success_payment { padding-bottom: 3.429rem; }
 

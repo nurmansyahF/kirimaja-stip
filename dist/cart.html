@@ -111,6 +111,22 @@
                 </div>
               </div>
             </section>
+            <section class="cart_promocode">
+              <div class="container">
+                <h3>Yuk pakai kode promonya!</h3>
+                <form class="form-inline" id="promoCode" action="#">
+                  <div class="form-group">
+                    <label>Kode promo</label>
+                    <input class="form-control" type="text" placeholder="Masukan kode promo"/>
+                  </div>
+                  <div class="form-action">
+                    <button class="btn btn_border mute" type="submit">Gunakan kode</button>
+                  </div>
+                </form>
+                <div class="error-text"><span>Kode promo tidak ditemukan</span></div>
+                <div class="total-promo"><span>Kamu akan menghemat</span>&nbsp;<b>Rp 16.000</b></div>
+              </div>
+            </section>
             <section class="cart_shipingdetail">
               <div class="container">
                 <h3>Informasi pengiriman pesanan</h3>
@@ -193,5 +209,77 @@
     <script type="text/javascript" src="plugins/hbaloadimages/hbaloadimages.min.js"></script>
     <script type="text/javascript" src="plugins/owlcarousel/owl.carousel.min.js"></script>
     <script type="text/javascript" src="scripts/main.js"></script>
+    <script>
+      $('#promoCode').each(function() {
+        var form = $(this),
+            inpt = form.find('.form-control'),
+            btn = form.find('.btn'),
+            et = form.siblings('.error-text'),
+            tp = form.siblings('.total-promo');
+      
+        inpt.on('input', function() {
+          if (this.value.trim()) {
+            btn.removeClass('mute');
+          } else {
+            btn.addClass('mute');
+          }
+        });
+      
+        form.on('click', '.btn', function(e) {
+          e.preventDefault();
+          if (form.hasClass('code-found')) {
+            form.removeClass('code-found');
+            btn.removeClass('cancel').html('Gunakan kode');
+            inpt.val('').trigger('input');
+            et.hide();
+            tp.hide();
+          } else {
+            if (!inpt.val()) return;
+            if (inpt.val() === 'KIRIMAJARAMADHAN10') {
+              form.addClass('code-found');
+              btn.addClass('cancel').html('Batal');
+              et.hide();
+              tp.show();
+            } else {
+              form.find('.form-group').addClass('error');
+              et.show();
+              tp.hide();
+            }
+          }
+        });
+      });
+      
+      
+      
+      //- $('#promoCode').each(function(){
+      //-   var t = $(this),
+      //-       inpt = t.find('.form-control'),
+      //-       btn = t.find('.btn'),
+      //-       et = t.siblings('.error-text'),
+      //-       tp = t.siblings('.total-promo');
+      //-   inpt.on("keyup change", function(e) {
+      //-     if($(this).val() != ""){
+      //-       btn.removeClass('mute');
+      //-     }else{
+      //-       btn.addClass('mute');
+      //-     }
+      //-   })
+      //-   btn.on('click', function(){
+      //-     if(inpt.val() != "" && inpt.val() == "KIRIMAJARAMADHAN10"){
+      //-       t.addClass('code-found');
+      //-       btn.addClass('cancel').html('Batal');
+      //-       et.show();
+      //-       tp.hide();
+      //-     }else{
+      //-       t.find('.form-group').addClass('error');
+      //-       et.hide();
+      //-       tp.show();
+      //-     }
+      //-     if($(this).hasClass('cancel')){
+      //-       $(this).removeClass('cancel').html('Gunakan kode');
+      //-     }
+      //-   })
+      //- })
+    </script>
   </body>
 </html>
