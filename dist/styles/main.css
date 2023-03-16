@@ -786,9 +786,9 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .cart_promocode .btn_border.error:hover, .cart_promocode .btn_border.cancel:hover { background: #CB2E0C; color: #FFF; }
 
-.cart_promocode .error-text { color: #DB5959; padding-top: 4px; display: none; }
+.cart_promocode .error-text { color: #DB5959; padding-top: 4px; }
 
-.cart_promocode .total-promo { padding-top: 4px; display: none; }
+.cart_promocode .total-promo { padding-top: 4px; }
 
 .cart_promocode .total-promo span { color: #6D6E71; }
 
