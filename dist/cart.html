@@ -238,6 +238,7 @@
             if (inpt.val() === 'KIRIMAJARAMADHAN10') {
               form.addClass('code-found');
               btn.addClass('cancel').html('Batal');
+              form.find('.form-group').removeClass('error');
               et.hide();
               tp.show();
             } else {
@@ -248,38 +249,6 @@
           }
         });
       });
-      
-      
-      
-      //- $('#promoCode').each(function(){
-      //-   var t = $(this),
-      //-       inpt = t.find('.form-control'),
-      //-       btn = t.find('.btn'),
-      //-       et = t.siblings('.error-text'),
-      //-       tp = t.siblings('.total-promo');
-      //-   inpt.on("keyup change", function(e) {
-      //-     if($(this).val() != ""){
-      //-       btn.removeClass('mute');
-      //-     }else{
-      //-       btn.addClass('mute');
-      //-     }
-      //-   })
-      //-   btn.on('click', function(){
-      //-     if(inpt.val() != "" && inpt.val() == "KIRIMAJARAMADHAN10"){
-      //-       t.addClass('code-found');
-      //-       btn.addClass('cancel').html('Batal');
-      //-       et.show();
-      //-       tp.hide();
-      //-     }else{
-      //-       t.find('.form-group').addClass('error');
-      //-       et.hide();
-      //-       tp.show();
-      //-     }
-      //-     if($(this).hasClass('cancel')){
-      //-       $(this).removeClass('cancel').html('Gunakan kode');
-      //-     }
-      //-   })
-      //- })
     </script>
   </body>
 </html>

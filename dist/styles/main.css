@@ -716,7 +716,11 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .cart_head h1 { font-size: 1.286rem; line-height: 1.5555555555555556em; margin-bottom: 0; }
 
+.cart_listorder { padding-bottom: 0; }
+
 .cart .listorder_item { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; padding: 24px 0; border-top: 1px solid #E6E7E8; border-bottom: 1px solid #E6E7E8; }
+
+.cart .listorder_item:last-child { border-bottom: 0; }
 
 .cart .listorder_item .box-img { -webkit-flex: 0 0 100px; -ms-flex: 0 0 100px; flex: 0 0 100px; max-width: 100%; max-height: 72px; position: relative; border-radius: 6px; overflow: hidden; padding: 11% 0; }
 
@@ -756,7 +760,7 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .cart .grandtotal .col-7 { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: flex-end; -ms-flex-pack: end; justify-content: flex-end; }
 
-.cart_shipingdetail { padding-top: 0; padding-bottom: 5.714rem; }
+.cart_shipingdetail { padding-bottom: 5.714rem; }
 
 .cart_shipingdetail h3 + .message-box { margin-top: -0.571rem; }
 
@@ -768,9 +772,7 @@ body #start_project .validation_message { padding: 0.5rem 0 1rem; color: red; ba
 
 .cart_promocode .form-inline { display: -webkit-flex; display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; -webkit-flex-flow: row wrap; flex-flow: row wrap; -webkit-align-items: flex-end; -ms-flex-align: end; align-items: flex-end; }
 
-.cart_promocode .form-group { margin-right: 8px; margin-bottom: 0; padding-bottom: 0 !important; }
-
-.cart_promocode .form-control, .cart_promocode .btn.dropdown-toggle { min-width: 14.813rem; }
+.cart_promocode .form-group { margin-right: 8px; margin-bottom: 0; padding-bottom: 0 !important; -webkit-flex: 0 0 calc(100% - 124px); -ms-flex: 0 0 calc(100% - 124px); flex: 0 0 calc(100% - 124px); max-width: calc(100% - 124px); }
 
 .cart_promocode .btn_border { padding: 9px 12px; background: #FFF; min-width: 8.214rem; }
 

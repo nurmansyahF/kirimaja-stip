@@ -351,7 +351,7 @@
       line-height: 1.5555555555555556em
       margin-bottom: 0
   &_listorder
-
+    padding-bottom: 0
   .listorder
     &_wrap
     &_item
@@ -361,6 +361,8 @@
       padding: 24px 0
       border-top: 1px solid #E6E7E8
       border-bottom: 1px solid #E6E7E8
+      &:last-child
+        border-bottom: 0
       .box-img
         flex: 0 0 100px
         max-width: 100%
@@ -454,7 +456,6 @@
       justify-content: flex-end
 
   &_shipingdetail
-    padding-top: 0
     padding-bottom: 5.714rem
     h3 + .message-box
       margin-top: -0.571rem
@@ -476,8 +477,10 @@
       margin-right: 8px
       margin-bottom: 0
       padding-bottom: 0 !important
+      flex: 0 0 calc(100% - 124px)
+      max-width: calc(100% - 124px)
     .form-control
-      min-width: 14.813rem
+      // min-width: 14.813rem
     .btn_border
       padding: 9px 12px
       background: #FFF
